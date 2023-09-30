@@ -1,0 +1,379 @@
+    p.title_inside {
+    margin: 0 auto;
+    margin-top: 0px;
+    overflow: hidden;
+    padding: 7px 0 5px 0;
+    clear: both;
+    font-size: 22px;
+    color: #303030;
+    margin-top: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+div.login {
+    width: 456px;
+}
+iv.register input[type="checkbox"] {
+    margin-top: 2px;
+}
+div.form input[type="checkbox"] {
+    vertical-align: -1px;
+    font-size: 14px;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+input[type="checkbox"], input[type="radio"], input[type="image"] {
+    border: 0;
+}
+.L {
+    float: left;
+}
+div.login input[type="text"], div.login input[type="password"] {
+    width: 100%;
+}
+
+
+div.form input[type="text"], div.form input[type="password"] {
+    background-color: #fff;
+    color: #414141;
+    border: 1px solid #e8e8e8;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 10px 7px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+div.register span.checkbox_note {
+    vertical-align: -2px;
+}
+div.form select {
+    background: #fff;
+        background-clip: border-box;
+    border: 1px solid #e8e8e8;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #414141;
+    padding: 7px 10px;
+    height: 38px;
+    *height: 56px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+input.btn_brand, button.btn_brand, a.btn_brand {
+    background: #38b04a;
+        background-clip: border-box;
+    border: 0;
+    color: #fff !important;
+    white-space: nowrap;
+    padding: 7px 15px 9px 15px;
+    font-size: 14px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    cursor: pointer;
+    font-family: 'OpenSans',arial;
+    display: inline-block;
+    vertical-align: 0;
+}
+button {
+    outline: 0 !important;
+}
+div.form label.field_R {
+    display: block;
+    padding: 9px 0 0 0;
+    float: left;
+    margin-right: 15px;
+}
+div.form input.btn_primary, div.form button.btn_primary, div.form a.btn_primary {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+input.btn_primary, button.btn_primary, a.btn_primary {
+    background: #38b04a;
+        background-clip: border-box;
+    border: 0;
+    font-weight: bold;
+    color: #fff !important;
+    white-space: nowrap;
+    padding: 5px 10px 7px 10px;
+    font-size: 14px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    cursor: pointer;
+    font-family: 'OpenSans',arial;
+    display: inline-block;
+    vertical-align: 0;
+}
+div.register div.field_btn {
+    padding-left: 110px;
+    margin: 25px 0 10px 0;
+    clear: both;
+}
+button {
+    outline: 0 !important;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.register div.field_link {
+    color: #999;
+    font-size: 12px;
+}
+div.register a.link_register {
+
+    color: #38b04a;
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+div.form div.field_link a {
+    color: #38b04a;
+    text-decoration: underline;
+}
+
+div.form label.field_R {
+    display: block;
+    padding: 9px 0 0 0;
+    float: left;
+    margin-right: 15px;
+}
+a {
+
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+
+}
+div.form div.field_link {
+    text-align: left;
+    margin: 10px 0;
+    overflow: hidden;
+}
+div.register {
+    width: 446px;
+}
+div.form .form_item {
+    width: 100%;
+}
+div.form label.field_L1 {
+    display: block;
+    color: #414141;
+    font-size: 14px;
+}
+div.form label.field_L1 {
+    display: block;
+    color: #414141;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.register select.date_chose {
+    width: 32%;
+    margin-right: 2%;
+}
+div.register input.register_name {
+    width: 66%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.fr_end {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+input, select {
+    vertical-align: middle;
+}
+div.login a.link_register {
+    color: #38b04a;
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.form input[placeholder] {
+    color: #666 !important;
+}
+input, select {
+    vertical-align: middle;
+}
+div.form span.other_color {
+    margin-left: 5px;
+}
+.other_color {
+    color: red;
+}
+div.form {
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 300;
+    color: #414141;
+}
+
+div.login div.field_btn {
+    padding-left: 110px;
+    margin: 10px 0;
+}
+div.login div.field_link {
+    padding-left: 110px;
+    margin: 15px 0;
+}
+div.form div.field_link {
+    text-align: left;
+    margin: 10px 0;
+    overflow: hidden;
+}
+div.form div.err {
+    padding-left: 110px;
+}
+div.form div.field {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    padding-left: 110px;
+    margin: 10px 0;
+}
+div.form label.field_L {
+    display: block;
+    color: #414141;
+    font-size: 14px;
+    position: absolute;
+    top: 11px;
+    left: 0;
+}
+p.title_inside span {
+    font-weight: normal;
+    font-size: 14px;
+}
+p.title_login {
+    font-size: 18px;
+    color: #303030;
+    margin: 20px 0 20px 20px;
+}
+p.title_inside a.hi {
+    font-size: 16px;
+    color: #3cb54b;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+p.title_login1 {
+    font-size: 18px;
+    color: #303030;
+    margin: 20px 0 20px 0;
+}
+.container1{
+    height:400px;
+    width: 100%;
+}   
+.container2{
+    height:400px;
+    width: 84%;
+    margin:auto;
+}
+.container3{
+    height:80px;
+    width: 100%;
+    margin:auto;
+}
+.loginMore
+{
+    height:315px;
+    width: 30%;
+    margin:auto;
+    float: left;
+}
+.login_other{
+    height:185px;
+    width: 60%;
+}
+.login_other2
+{
+    float:left;
+    height:200px;
+    width: 60%;
+    margin:auto;
+    padding-left: 15px;
+}
+.formlogin
+{
+    height:290px;
+    width: 65%;
+    margin:auto;    
+    float: right;
+}
+.formrigister
+{
+    height:600px;
+}
+
