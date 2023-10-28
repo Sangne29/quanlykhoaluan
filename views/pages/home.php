@@ -13,7 +13,7 @@ require_once ('system/Database.php');
 	</div>
 </section>
 
-<section class="mt_search">
+<!-- <section class="mt_search">
 	<div class="container card bg-white" style="padding:30px !important; ">
 		<div class="search-content-slider">
 			<div class="section-title text-center ">
@@ -30,11 +30,10 @@ require_once ('system/Database.php');
 								<a href="/"><img alt="Image" height="45" src="https://lms.iuh.edu.vn/pluginfile.php/1/theme_academi/logo/1676936055/Logo_IUH.png"></a>
 							</div>
 	</div>
-			Chào mừng các bạn đến với kênh học tập trực tuyến của Trường Đại học Công nghiệp TP.HCM, hệ thống cung cấp cho sinh viên những khóa học trực tuyến song song với các lớp học trên lớp mà sinh viên đang học tại trường, trong thời gian tham gia khoa học, sinh viên vui lòng làm bài tập theo yêu cầu đầy đủ. Chúc các bạn có nhiều kiến thức trên kênh học trực tuyến này.
-Chào mừng các bạn đến với kênh học tập trực tuyến của Trường Đại học Công nghiệp TP.HCM, hệ thống cung cấp cho sinh viên những khóa học trực tuyến song song với các lớp học trên lớp mà sinh viên đang học tại trường, trong thời gian tham gia khoa học, sinh viên vui lòng làm bài tập theo yêu cầu đầy đủ. Chúc các bạn có nhiều kiến thức trên kênh học trực tuyến này.
+	Tiền thân của Trường Đại học Công nghiệp thành phố Hồ Chí Minh là Trường Huấn nghiệp Gò Vấp do các tu sĩ dòng Don Bosco thành lập 11/11/1956 tại xã Hạnh Thông, Quận Gò Vấp, Tỉnh Gia Định. Năm 1968, Trường được đổi tên thành Trường tư thục Trung học Kỹ thuật đệ nhất cấp Don Bosco. Đến ngày 31/01/1970, Trường được cải biên thành Trường tư thục Trung học Kỹ thuật đệ nhị cấp Don Bosco, được gọi tắt là Trường Trung học Kỹ thuật Don Bosco. Sau ngày hòa bình, thống nhất đất nước, quân giải phóng miền Nam tiếp quản và ngày 19/12/1975 Trường được bàn giao cho Tổng cục Cơ khí Luyện kim và Điện tử. Năm 1978, Trường được đổi tên thành Trường Công nhân Kỹ thuật IV trực thuộc Bộ Cơ khí và Luyện kim. Đến năm 1994, Trường hợp nhất với Trường Trung học Hóa chất II tại thành phố Biên Hòa thành Trường Trung học Kỹ thuật Công nghiệp IV, trực thuộc Bộ Công Nghiệp. Tháng 3 năm 1999, Trường được nâng cấp thành Trường Cao đẳng Công nghiệp IV và tháng 12 năm 2004, Trường được nâng cấp thành Trường Đại học Công nghiệp thành phố Hồ Chí Minh theo quyết định số 214/2004/QĐ - TTg của Thủ tướng Chính phủ và Trường được Thủ tưởng Chính phủ phê duyệt thí điểm đổi mới cơ chế hoạt động giai đoạn 2015-2017 theo quyết định số 902/QĐ-TTg ngày 23 tháng 6 năm 2015, bắt đầu thực hiện từ năm học 2015 - 2016. Trường Đại học Công nghiệp thành phố Hồ Chí Minh là một trong những cơ sở giáo dục đại học lớn tại Việt Nam.
 		</div>
 	</div>
-</section>
+</section> -->
 
 <!-- Breadcrumb -->
 <!-- BreadCrumb Ends -->
@@ -50,7 +49,7 @@ Chào mừng các bạn đến với kênh học tập trực tuyến của Trư
 								<div class="row">
 									<div class="col-md-4">
 										<div class="destination-fw-image">
-											<img height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9lOldVW1d7bYngG12u0eZ697YNNOnCQwQ3g&usqp=CAU" alt="Image">
+											<img  src="https://i.ytimg.com/vi/6RzQvN238vQ/maxresdefault.jpg" alt="Image">
 										</div>
 									</div>
 									<div class="col-md-8">
@@ -68,7 +67,7 @@ Chào mừng các bạn đến với kênh học tập trực tuyến của Trư
 								<div class="row" style="margin-top: 20px;">
 									<div class="col-md-4">
 										<div class="destination-fw-image">
-											<img  height="150"  src="https://images2.thanhnien.vn/uploaded/dieutrang.qc/2021_06_04/iuh/iuh-1_OMMW.jpg?width=500" alt="Image">
+											<img  src="https://toplist.vn/images/800px/doi-ngu-giang-day-chat-luong-1111004.jpg" alt="Image">
 										</div>
 									</div>
 									<div class="col-md-8">

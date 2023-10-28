@@ -28,13 +28,21 @@ $list=$category->thesistopic_list($userId,$role);
 						<section class=" ">
 							<div class=" bg-white card">
 								<div class="row justify-content-end">
-									<div class="col-md-3">
-										<div class=" pt-1 ml-5">
-											<a class="text-white btn-sm btn-success" href="index.php?option=thesistopic&cat=insert">Thêm đề tài <i class="fas fa-plus"></i></a>
-											<a class="text-white btn-sm btn-danger " href="index.php?option=thesistopic&cat=trash">Thùng rác<i class="fas fa-trash"></i></a>
+									
+									<div class="col-md-4">
+										<div class="pt-1 ml-5 d-flex flex-row">
+											<a class="text-white btn-sm "href="index.php?option=thesistopic&cat=insert">
+											<button class="btn-success" style="width: 150px; height : 40px" >Thêm đề tài </i></button>	
+											
+											</a>
+											<a class="text-white btn-sm  "  href="index.php?option=thesistopic&cat=trash">
+												
+												<button class="btn-danger" style="width: 150px; height : 40px" >Đề tài đã xóa</i></button>
+											</a>
 										</div>
 									</div>
 								</div>
+							
 								<div class="row">
 									<div  class="card-block p-3">
 										<?php if(has_flash('thongbao')):  ?>
@@ -45,7 +53,7 @@ $list=$category->thesistopic_list($userId,$role);
 										<div class="col-md-12 p-3">
 											<table id="myTable1" class="table  table-striped table-bordered dt-responsive text-center">
 												<thead>
-													<tr class='table-info'>
+													<tr style="background: #484CA3; color: #ffffff">
 														<th>STT</th>
 														<th>Tên đề tài</th>
 														<th>GV hướng dẫn</th>
@@ -71,9 +79,9 @@ $list=$category->thesistopic_list($userId,$role);
 															<td class="text-center"><?php echo $row['Subject']  ?></td>
 															<td class="text-center"><?php echo substr($row['ThesisTopicType'],0,30); ?></td></td>
 															<td class="text-center"><?php if($row['Status']==1):  ?>
-																<p class='border border-success rounded'> Đã duyệt </p>
+																<p class=' border-success' style="color: #28A745"> Đã duyệt </p>
 																<?php else: ?>
-																<p class='border border-danger rounded'> Chưa duyệt </p>
+																<p class=' border-danger' style="color: #FE061E"> Chưa duyệt </p>
 																<?php endif;  ?>
 															</td>
 															<td class="text-center" style="width:9%">

@@ -30,7 +30,7 @@
 	<!-- Preloader Ends -->
 	<!-- Header -->
 	<header>
-		<div class="upper-head clearfix " style="background-color:#0404B4;">
+		<div class="upper-head clearfix " style="background-color:#484CA3;">
 			<div class="container ">
 				<div class="upper-head-inner">
 					<div class="contact-info pull-left">
@@ -65,33 +65,33 @@
 							<div id="navbar" class="navbar-nav-wrapper">
 								<ul class="nav navbar-nav " id="responsive-menu">
 									<li>
-										<a href="index.php" style="color:#0B0B61;">- Trang chủ </a>
+										<a href="index.php" style="color:#0B0B61;">Trang chủ |</a>
 									</li>
 								</ul>
 								<ul class="nav navbar-nav " id="responsive-menu">
 									<li>
-										<a href="index.php?option=registertopic" style="color:#0B0B61;"> - Đăng ký </a>
+										<a href="index.php?option=registertopic" style="color:#0B0B61;"> Đăng ký đề tài  |</a>
 									</li>
 								</ul>
 								<ul class="nav navbar-nav " id="responsive-menu">
 									<li>
-										<a href="index.php?option=registeredtopic_detail" style="color:#0B0B61;">- Chi tiết đề tài đã đăng ký </a>
+										<a href="index.php?option=registeredtopic_detail" style="color:#0B0B61;">Chi tiết đề tài đã đăng ký |</a>
 									</li>
 								</ul>
 								<ul class="nav navbar-nav " id="responsive-menu">
 									<li>
-										<a href="index.php?option=PrintInternshipCard" style="color:#0B0B61;">- In phiếu thực tập</a>
+										<a href="index.php?option=PrintInternshipCard" style="color:#0B0B61;">In phiếu thực tập |</a>
 									</li>
 								</ul>
 								<ul class="nav navbar-nav " id="responsive-menu">
 									<li>
-										<a href="index.php?option=ViewNotifications" style="color:#0B0B61;">- Thông báo</a>
+										<a href="index.php?option=ViewNotifications" style="color:#0B0B61;">Thông báo |</a>
 									</li>
 								</ul>
 								</ul>
 								<ul class="nav navbar-nav " id="responsive-menu">
 									<li>
-										<a href="index.php?option=contact" style="color:#0B0B61;">- Liên hệ </a>
+										<a href="index.php?option=contact" style="color:#0B0B61;">Liên hệ </a>
 									</li>
 								</ul>
 							</div><!--/.nav-collapse -->

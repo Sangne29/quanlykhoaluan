@@ -119,11 +119,11 @@ if(isset($idTicket)){
 <section class="booking">
 	<div class="container bg-white" style="padding:20px;">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 d-flex flex-row">
 				<div class="booking-confirmed booking-outer">
-					<div class="confirmation-title">
+					<div class="confirmation-title flex ">
 						<div class="form-title form-title-1">
-							<h2 class="text-danger">Đăng ký đề tài</h2>
+							<h2 class="text-danger" style="color:#484CA3;">Đăng ký đề tài</h2>
 						</div>
 						<div class="payment-info detail">
 							<div class="row">
@@ -135,7 +135,7 @@ if(isset($idTicket)){
 							<form action="" method="POST">
 								<div class="billing-back-btn">
 									<div class="billing-btn">
-										<button name="Register" class="btn-blue btn-red btn-style-1 " type="submit">Đăng ký ngay</button>
+										<button name="Register" class="btn-blue btn-green btn-style-1 " type="submit">Đăng ký ngay</button>
 									</div>
 								</div>			
 								<?php if(has_flash('thongbao')):  ?>
