@@ -87,6 +87,8 @@ $list=$category->thesistopic_list($userId,$role);
 															<td class="text-center" style="width:9%">
 																<a class="btn btn-sm btn-warning" href="index.php?option=thesistopic&cat=update&id=<?php echo $id; ?>" > <i class="text-white fas fa-edit"></i> </a>
 																<a class="btn btn-sm btn-danger " href="index.php?option=thesistopic&cat=detrash&id=<?php echo $id; ?>" > <i class=" fa fa-trash"></i> </a>
+																<a class="btn btn-sm btn-success " href="index.php?option=thesistopic&cat=add_student&id=<?php echo $id; ?>" > <i class=" fa fa-plus"></i> </a>
+
 															</td>
 														</tr>
 													<?php endforeach; ?>

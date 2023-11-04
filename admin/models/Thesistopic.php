@@ -16,13 +16,27 @@ class thesistopic extends Database
 		$sql="SELECT * FROM $this->table";
 		return $this->QueryCount($sql);
 	}
+	function thesistopic_name_distinct_list($userId,$role)
+	{
+		if($role == 8) 
+		{
+			$sql="SELECT id,Name FROM $this->table WHERE status!='0' AND InstructorsID = '$userId' ORDER BY ID ASC";
+			return $this->QueryAll($sql);
+		}
+		// giang vien
+		if($role == 7)
+		{
+			$sql="SELECT id,Name FROM $this->table WHERE status!='0' AND InstructorsID = '$userId' ORDER BY ID ASC";
+			return $this->QueryAll($sql);
+		}		
+	}
 	function thesistopic_name($id)
 	{
-		$sql="SELECT *FROM $this->table WHERE id='$id'";
+		$sql="SELECT * FROM $this->table WHERE id='$id'";
 		$row=$this->QueryOne($sql);
 		if($row!==null)
 		{
-			return $row['name'];
+			return $row['Name'];
 		}
 		return "Unthesistopic";
 	}

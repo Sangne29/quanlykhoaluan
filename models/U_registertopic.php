@@ -7,6 +7,8 @@ class u_registertopic extends Database
 	{
 		parent::__construct();
 		$this->table = $this->TableName('registertopic');
+		$this->evaluation = $this->TableName('evaluation_student');
+
 	}
 	
 	function registertopic_list_u($page=true)
@@ -92,6 +94,25 @@ class u_registertopic extends Database
 		$strv=rtrim(rtrim($strv),',');
 		$sql="INSERT INTO $this->table ($strf) VALUES ($strv)";
 		$this->QueryNoResult($sql);
+
+		/// insert into evaluation_student table
+		$data2 = array(
+			'StudentID' => $data['StudentID'] , 
+			'ThesisTopicID' => $data['ThesisTopicID'],
+		);
+		$strf2='';
+		$strv2='';
+		foreach ($data2 as $f2 => $v2)
+		{
+			$strf2.=$f2.', ';
+			$strv2.="'".$v2."',";
+		}
+		$strf2=rtrim(rtrim($strf2),',');
+		$strv2=rtrim(rtrim($strv2),',');
+		$sql2 = "INSERT INTO $this->evaluation ($strf2) VALUES ($strv2)";
+		$this->QueryNoResult($sql2);
+		///
+
 		set_flash('thongbao',' Đăng ký thành công');
 		redirect('index.php?option=registeredtopic_detail');
 	}

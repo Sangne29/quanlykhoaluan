@@ -7,8 +7,22 @@ class registertopic extends Database
 	{
 		parent::__construct();
 		$this->table = $this->TableName('registertopic');
+		$this->evaluation = $this->TableName('evaluation_student');
 	}
 	
+	function register_topic_student_list($userId , $role , $thesistopicId){
+		if($role == 8) 
+		{
+			$sql="SELECT * FROM $this->table WHERE status!='0' AND TeacherID = '$userId' AND ThesisTopicID='$thesistopicId'  ORDER BY ID ASC";
+			return $this->QueryAll($sql);
+		}
+		if($role == 7) 
+		{
+			$sql="SELECT * FROM $this->table WHERE status!='0' AND TeacherID = '$userId' AND ThesisTopicID='$thesistopicId' ORDER BY ID ASC";
+			return $this->QueryAll($sql);
+		}
+	}
+
 	function registertopic_list($userId,$role)
 	{
 		// trưởng bộ môn
@@ -100,6 +114,8 @@ class registertopic extends Database
 		$strv=rtrim(rtrim($strv),',');
 		$sql="INSERT INTO $this->table ($strf) VALUES ($strv)";
 		$this->QueryNoResult($sql);
+
+		
 		set_flash('thongbao',' Lưu Thành công');
 		redirect('index.php?option=registertopic');
 	}
