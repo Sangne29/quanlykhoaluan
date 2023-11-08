@@ -17,6 +17,9 @@
         return $this->QueryAll($sql);
     }
 
+    function last_inserted(){
+        return $this->QueryOne("SELECT ID FROM $this->table ORDER BY ID DESC LIMIT 1")['ID'];
+    }
 
 
     ///

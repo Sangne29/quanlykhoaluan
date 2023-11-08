@@ -44,6 +44,11 @@ class evaluation extends Database
 		$this->QueryNoResult($sql);
 		set_flash('thongbao',' Lưu Thành công');
     }
+	function evaluation_delete($id){
+		$sql="DELETE  FROM $this->table 
+		WHERE id='$id'";
+		$this->QueryNoResult($sql);
+	}
 	function update($key , $value , $id){
 		$sql = "UPDATE $this->table SET $key='$value' WHERE id=$id";
 		$this->QueryNoResult($sql);

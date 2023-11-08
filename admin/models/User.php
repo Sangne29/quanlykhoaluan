@@ -25,7 +25,11 @@ class User extends Database
 		}
 		return $this->QueryAll($sql);
 	}
-
+	function list_user_cuss($id)
+	{
+		$sql="SELECT * FROM $this->table WHERE status='1' AND access='6' AND ID = '$id'";
+		return $this->QueryOne($sql);
+	}
 	function teacher_user()
 	{
 		$sql="SELECT * FROM $this->table 

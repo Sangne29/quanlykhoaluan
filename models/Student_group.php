@@ -30,6 +30,10 @@
         $sql="SELECT * FROM $this->table WHERE ThesisTopicID = '$topicID'";
         return $this->QueryCount($sql);
     }
+    function last_inserted_id(){
+        $sql = "SELECT ID FROM $this->table ORDER BY ID DESC LIMIT 1";
+        return $this->QueryOne($sql);
+    }
     function studentgroup_insert($data)
     {
         $strf='';

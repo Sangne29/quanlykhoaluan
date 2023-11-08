@@ -79,7 +79,7 @@ $list_evaluation = $category_evaluation->list_evaluation($userId, $id);
 														<?php endforeach; ?>
 													
 										        </tbody>
-												<input type="submit" name="update_evaluation" value="Cập nhật" class="form-control btn-primary col-md-1 float-right" >
+												<input type="submit" name="update-evaluation" value="Cập nhật" class="form-control btn-primary col-md-1 float-right" >
 													</form>
 									</table>
 									

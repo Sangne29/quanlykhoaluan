@@ -68,18 +68,6 @@ if(isset($idTicket)){
 		redirect(url);
 	}
 
-
-	$mydata=array(
-		'ID1'=>$rowUser['ID'],
-		'Username'=>$rowUser['username'],
-		'FullName'=>$rowUser['fullname'],
-		'ClassRoom'=>"DHHTTT15",
-		'ThesisTopicID'=>$row['ID'],
-		'TeacherID'=>$row['InstructorsID'],
-		'TeacherName'=>$row['Instructors'],
-		'SubGroupID'=>$idTicket);
-	$studentgroup->studentgroup_insert($mydata);
-
 	$mydata1=array(
 		'Name'=>$row['Name'],
 		'StudentID'=>$id,
@@ -87,7 +75,7 @@ if(isset($idTicket)){
 		'ClassRoom'=>"DHHTTT15",
 		'Username'=>$rowUser['username'],
 		'StudentName'=>$rowUser['fullname'],
-		'GroupName'=>$idTicket,
+		// 'GroupName'=>$idTicket,
 		'Process'=>0,
 		'TopicType'=>$teacher,
 		'TeacherID'=>$row['InstructorsID'] ,
@@ -101,15 +89,32 @@ if(isset($idTicket)){
 	);
 	$registertopic->registertopic_insert($mydata1);
 
+	$mydata=array(
+		'ID1'=>$rowUser['ID'],
+		'Username'=>$rowUser['username'],
+		'FullName'=>$rowUser['fullname'],
+		'ClassRoom'=>"DHHTTT15",
+		'ThesisTopicID'=>$row['ID'],
+		'TeacherID'=>$row['InstructorsID'],
+		'TeacherName'=>$row['Instructors'],
+		'SubGroupID'=>$idTicket,
+		'registertopicID' => $registertopic->last_inserted(),
+	);
+	$studentgroup->studentgroup_insert($mydata);
+
+	
+
 	$mydata2=array(
 		'GroupName'=>$idTicket,
 	);
 	$registertopic->registertopic_update($mydata2);
 
-	$mydata3=array(
-		'SubGroupID'=>$idTicket
-	);
-	$studentgroup->studentgroup_update($mydata3);
+	// $mydata3=array(
+	// 	'SubGroupID'=>$idTicket,
+		
+	// );
+	// $studentgroup->studentgroup_update($mydata3);
+
 		set_flash('thongbao','Đăng ký thành công.');
 		redirect('index.php?option=registeredtopic_detail');
 		redirect(url);

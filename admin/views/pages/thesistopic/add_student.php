@@ -2,6 +2,86 @@
     $student_group = loadModel('student_group');
     $nongroup_student = $student_group->nongroup_student_list();
     // print_r($nongroup_student);
+	$user = loadModel('User');
+	$registertopic= loadModel('registertopic');
+
+	$thesistopicID = (int)$_REQUEST['id'];
+	$u_thesistopic= loadModel('thesistopic');
+	$row=$u_thesistopic->thesistopic_rowid($thesistopicID);
+
+
+	$studentgroup= loadModel('Student_group');
+	$listGroup=$studentgroup->all_studentgroup($row['ID']);
+
+	
+
+	$teacher = "Thực thập doanh nghiệp";
+	if ($row['ThesisTopicTypeID'] == 1) 
+	{
+		$teacher = "Khóa luận tốt nghiệp.";
+	}
+
+	if(isset($_POST['btn_add_student'])){
+		$id = $_POST['user_id'];
+		$rowUser= $user->list_user_cuss($id);
+		$studentgroup1 = $studentgroup->count_studentgroup_thesisTopic($row['ID']);
+		if($studentgroup1 == 4)
+		{
+			set_flash('thongbaoloi','Mỗi đề tài chỉ được phép đăng ký 2 nhóm');
+			redirect('index.php?option=thesistopic&cat=add_student&id='.$thesistopicID);
+		}
+
+	$mydata1=array(
+		'Name'=>$row['Name'],
+		'StudentID'=>$id,
+		'TopicName'=>$row['Name'],
+		'ClassRoom'=>"DHHTTT15",
+		'Username'=>$rowUser['username'],
+		'StudentName'=>$rowUser['fullname'],
+		// 'GroupName'=>$idTicket,
+		'Process'=>0,
+		'TopicType'=>$teacher,
+		'TeacherID'=>$row['InstructorsID'] ,
+		'TeacherName'=>$row['Instructors'],
+		'Subject'=>$row['Subject'],	
+		'Type'=>$row['ThesisTopicTypeID'],
+		'Status'=>1,
+		'GuidePoints'=>0,
+		'PointProcess'=>0,
+		'ThesisTopicID'=>$row['ID'],
+	);
+	$registertopic->add_student_registertopic_insert($mydata1);
+	$registertopic_last_inserted = $registertopic->last_inserted();
+	$mydata=array(
+		'ID1'=>$rowUser['ID'],
+		'Username'=>$rowUser['username'],
+		'FullName'=>$rowUser['fullname'],
+		'ClassRoom'=>"DHHTTT15",
+		'ThesisTopicID'=>$row['ID'],
+		'TeacherID'=>$row['InstructorsID'],
+		'TeacherName'=>$row['Instructors'],
+		// 'SubGroupID'=>$idTicket,
+		'registertopicID' => $registertopic_last_inserted,
+	);
+	$studentgroup->studentgroup_insert($mydata);
+
+	$idTicket = $studentgroup->last_inserted();
+	$_SESSION['idTicket'] = $idTicket;
+	print_r($idTicket);
+	$mydata2=array(
+		'GroupName'=>$idTicket,
+	);
+	$registertopic->registertopic_update($mydata2, $registertopic_last_inserted);
+
+	$mydata3=array(
+		'SubGroupID'=>$idTicket,
+		
+	);
+	$studentgroup->studentgroup_update($mydata3);
+
+		set_flash('thongbao','Đăng ký thành công.');
+		redirect('index.php?option=thesistopic&cat=add_student&id='.$thesistopicID);
+	}
 ?>
 
 <?php require_once 'views/header.php'; ?>
@@ -26,6 +106,12 @@
 						</div>
 						<section class=" ">
 							<div class=" bg-white card">
+								<?php if(has_flash('thongbao')):  ?>
+												<div class="alert alert-success" > <?php echo get_flash('thongbao') ; ?> </div>
+											<?php endif; ?>
+											<?php if(has_flash('thongbaoloi')):  ?>
+												<div class="alert alert-danger" > <?php echo get_flash('thongbaoloi') ; ?> </div>
+											<?php endif; ?>
 								<div class="row justify-content-start">
 									<div class="col-md-3">
 										
@@ -54,6 +140,7 @@
 													</tr>
 												</thead>
 												<tbody>
+													
 														<?php foreach($nongroup_student as $row):?>
 														<tr>
 															<td></td>
@@ -63,13 +150,13 @@
 															<td><?php echo $row['phone']  ?></td>
 															<td><?php echo $row['email']  ?></td>
 															<!-- <td><a href="index.php?option=thesistopic&cat=select_group&id=<?php echo $row['ID'];?>">Thêm vào đề tài</a></td> -->
-															<td><button class='btn btn-info add_student_btn' id="add_student_<?php echo $row['ID'];?>" >Thêm</button></td>
-															<script>
-
-															</script>
+															<td><form action="" method="POST" >
+																<input type="submit" class='btn btn-info add_student_btn' name="btn_add_student" id="add_student_<?php echo $row['ID'];?>" value="Thêm" />
+																<input type="text" style="display:none;" name="user_id" value="<?php echo $row['ID'];?>">
+															</form></td>
+														
 														</tr>
 														<?php endforeach; ?>
-													
 										        </tbody>
 									</table>
 									

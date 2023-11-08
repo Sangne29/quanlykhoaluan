@@ -101,6 +101,50 @@ class registertopic extends Database
 		$this->QueryNoResult($sql);
 	}
 
+	function add_student_registertopic_insert($data)
+	{
+
+
+
+		$strf='';
+		$strv='';
+		foreach ($data as $f => $v)
+		{
+			$strf.=$f.', ';
+			$strv.="'".$v."',";
+		}
+		$strf=rtrim(rtrim($strf),',');
+		$strv=rtrim(rtrim($strv),',');
+		$sql="INSERT INTO $this->table ($strf) VALUES ($strv)";
+		$this->QueryNoResult($sql);
+		$count_student_id = $this->QueryCount("SELECT id from $this->evaluation where $this->evaluation.StudentID = ".$data['StudentID']);
+		$registertopicID = $this->QueryOne("SELECT ID FROM $this->table ORDER BY ID DESC LIMIT 1")['ID'];
+		// /// insert into evaluation_student table
+		if( $count_student_id == 0){
+			$data2 = array(
+				'StudentID' => $data['StudentID'] , 
+				'ThesisTopicID' => $data['ThesisTopicID'],
+				'registertopicID' => $registertopicID,
+			);
+			$strf2='';
+			$strv2='';
+			foreach ($data2 as $f2 => $v2)
+			{
+				$strf2.=$f2.', ';
+				$strv2.="'".$v2."',";
+			}
+			$strf2=rtrim(rtrim($strf2),',');
+			$strv2=rtrim(rtrim($strv2),',');
+			$sql2 = "INSERT INTO $this->evaluation ($strf2) VALUES ($strv2)";
+			$this->QueryNoResult($sql2);
+		}
+		
+		// set_flash('thongbao',' Lưu Thành công');
+		// redirect('index.php?option=registertopic');
+	}
+	function last_inserted(){
+		return $this->QueryOne("SELECT ID from $this->table ORDER BY ID DESC LIMIT 1")['ID'];
+	}
 	function registertopic_insert($data)
 	{
 		$strf='';
