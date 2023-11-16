@@ -41,8 +41,14 @@ if(isset($idTicket)){
 }else{
     $idTicket = 0;
 }
-
-
+///1 SV chỉ được đăng ký 1 đề tài
+	$check_if_exist = $studentgroup->check_if_student_exist($id);
+	if($check_if_exist > 0)
+	{
+		set_flash('thongbaoloi','Mỗi Sinh viên chỉ đăng ký được 1 đề tài');
+		redirect('index.php?option=registertopic');
+		redirect(url);
+	}
 // Kiểm tra đăng ký chưa
 	$studentgroup2 = $studentgroup->count_studentgroup($id,$row['ID']);
 	if($studentgroup2 > 0)

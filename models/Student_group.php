@@ -24,7 +24,10 @@
         return $this->QueryCount($sql);
     }
     
-
+    function check_if_student_exist($studentID){
+        $sql = "SELECT ID from $this->table where ID1 = $studentID";
+        return $this->QueryCount($sql);
+    }
     function count_studentgroup_thesisTopic($topicID)
     {
         $sql="SELECT * FROM $this->table WHERE ThesisTopicID = '$topicID'";

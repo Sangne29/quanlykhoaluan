@@ -13,6 +13,10 @@ class evaluation extends Database
         $sql="SELECT * FROM $this->table";
         return $this->QueryCount($sql);
     }
+    function get_by_registertopic($registertopicID){
+        $sql = "SELECT * from $this->table where $this->table.registertopicID = $registertopicID";
+        return $this->QueryOne($sql);
+    }
     function list_evaluation($userId, $thesistopicId ){
         // $sql="SELECT StudentName, username, ClassRoom FROM $this->register_topic WHERE status!='0' AND TeacherID = '$userId' AND ThesisTopicID='$thesistopicId'  ORDER BY ID ASC 
         // LEFT JOIN $this->table ON $this->register_topic.StudentID = $this->table.StudentID";

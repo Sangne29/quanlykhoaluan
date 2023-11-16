@@ -13,12 +13,17 @@ $id=$_REQUEST['id'];
 $registertopic= loadModel('u_registertopic');
 $row=$registertopic->registertopic_rowid($id);
 
+$evaluation = loadModel("evaluation");
+$eval_data = $evaluation->get_by_registertopic($id);
+
 $id = $row['ThesisTopicID'];
 $thesisTopic=loadModel('u_thesistopic');
 $rowthesisTopic=$thesisTopic->thesistopic_rowid($id);
 
 $user = loadModel('user');
 $rowUser = $user->list_user_cuss($id);
+
+
 
 ?>
 
@@ -102,6 +107,10 @@ $rowUser = $user->list_user_cuss($id);
 									<tr>
 										<td class="title">Ghi chú từ giảng viên phản biện</td>
 										<td><?php echo $row['Commentcounter'] ?></td>
+									</tr>
+									<tr>
+										<td class="title">Điểm trung bình</td>
+										<td class="h4">Hệ 10 : <?php echo $eval_data['base10'] ?> <br>Hệ 4 : <?php echo $eval_data['base4'] ?> </td>
 									</tr>
 									<tr>
 										<td class="title">Tình trạng</td>

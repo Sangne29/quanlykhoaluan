@@ -1,4 +1,5 @@
 <?php
+$evaluation = loadModel('evaluation');
 if(isset($_POST['CAPNHAT']))
 {
 
@@ -11,6 +12,9 @@ if(isset($_POST['CAPNHAT']))
 		'Commnet'=>$_POST['Commnet'],	
 	);
 	$registertopic->registertopic_update($data,$id);
+
+	$evaluation->updateBase($id);
+
 	set_flash('thongbao',' Cập nhật điểm hướng dẫn thành công.');
 	redirect('index.php?option=registertopic&cat=insertPoint');
 }
@@ -26,6 +30,10 @@ if(isset($_POST['CAPNHAT1']))
 		'Commentcounter'=>$_POST['Commentcounter'],	
 	);
 	$registertopic->registertopic_update($data,$id);
+
+	$evaluation->updateBase($id);
+
+
 	set_flash('thongbao',' Cập nhật điểm phản biện thành công.');
 	redirect('index.php?option=registertopic&cat=RegisterArgument');
 }

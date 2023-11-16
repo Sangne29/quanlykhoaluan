@@ -55,10 +55,10 @@ $list_evaluation = $category_evaluation->list_evaluation($userId, $id);
 														<th>MSSV</th>
 														<th>Lớp</th>
 														<th>Nhóm</th>
-														<th>L01</th>
-														<th>L02</th>
-														<th>L03</th>
-														<th>L04</th>
+														<th>Điểm hướng dẫn</th>
+														<th>Điểm phản biện</th>
+														<th>Điểm hệ 10</th>
+														<th>Điểm hệ 4</th>
 														
 													</tr>
 												</thead>
@@ -70,10 +70,10 @@ $list_evaluation = $category_evaluation->list_evaluation($userId, $id);
 															<td><?php echo $row['username']  ?></td>
 															<td><?php echo $row['ClassRoom']  ?></td>
 															<td><?php echo $row['SubGroupID']  ?></td>
-															<td><input name="<?php echo ('l01_'.$row['id']); ?>" class="form-control" type="text" value="<?php echo $row['l01']; ?>"></td>
-															<td><input name="<?php echo ('l02_'.$row['id']); ?>"class="form-control" type="text" value="<?php echo $row['l02']; ?>"></td>
-															<td><input name="<?php echo ('l03_'.$row['id']); ?>"class="form-control" type="text" value="<?php echo $row['l03']; ?>"></td>
-															<td><input name="<?php echo ('l04_'.$row['id']); ?>"class="form-control" type="text" value="<?php echo $row['l04']; ?>"></td>
+															<td><input name="<?php echo ('GuidePoints_'.$row['registertopicID']); ?>" class="form-control" type="text" value="<?php echo $row['GuidePoints']; ?>"></td>
+															<td><input name="<?php echo ('PointProcess_'.$row['registertopicID']); ?>"class="form-control" type="text" value="<?php echo $row['PointProcess']; ?>"></td>
+															<td><?php echo $row['base10']; ?></td>
+															<td><?php echo $row['base4']; ?></td>
 
 														</tr>
 														<?php endforeach; ?>

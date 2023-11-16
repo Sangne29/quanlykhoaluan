@@ -29,6 +29,7 @@
 		{
 			set_flash('thongbaoloi','Mỗi đề tài chỉ được phép đăng ký 2 nhóm');
 			redirect('index.php?option=thesistopic&cat=add_student&id='.$thesistopicID);
+			redirect(url);
 		}
 
 	$mydata1=array(
