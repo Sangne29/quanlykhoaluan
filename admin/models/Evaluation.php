@@ -78,7 +78,7 @@ class evaluation extends Database
 		// redirect('index.php?option=evaluation');
 	}
 	function get_data_export(){
-		$sql = "SELECT user.fullname, user.username, studentgroup.ClassRoom, studentgroup.SubGroupID, thesistopic.Name, $this->table.l01,$this->table.l02,$this->table.l03,$this->table.l04
+		$sql = "SELECT user.fullname, user.username, studentgroup.ClassRoom, studentgroup.SubGroupID, thesistopic.Name, registertopic.GuidePoints,registertopic.PointProcess,$this->table.base4,$this->table.base10
 		FROM
 			$this->table 
 		INNER JOIN `user`
@@ -87,6 +87,8 @@ class evaluation extends Database
 			ON $this->table.StudentID = studentgroup.ID1
 		INNER JOIN thesistopic
             	ON evaluation_student.ThesisTopicID = thesistopic.ID
+		INNER JOIN registertopic
+            	ON $this->table.StudentID = registertopic.StudentID
 		";
 		return $this->QueryAll($sql);
 	}
