@@ -97,12 +97,20 @@ $rowUser = $user->list_user_cuss($id);
 										<td><?php echo $row['GuidePoints'] ?></td>
 									</tr>
 									<tr>
+										<td class="title">Điểm hướng dẫn 2</td>
+										<td><?php echo $row['GuidePoints2'] ?></td>
+									</tr>
+									<tr>
 										<td class="title">Ghi chú từ giảng viên hướng dẫn</td>
 										<td><?php echo $row['Commnet'] ?></td>
 									</tr>
 									<tr>
 										<td class="title">Điểm phản biện</td>
 										<td><?php echo $row['PointProcess'] ?></td>
+									</tr>
+									<tr>
+										<td class="title">Điểm phản biện 2</td>
+										<td><?php echo $row['PointProcess2'] ?></td>
 									</tr>
 									<tr>
 										<td class="title">Ghi chú từ giảng viên phản biện</td>

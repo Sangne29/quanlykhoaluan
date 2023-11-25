@@ -58,10 +58,30 @@ $str_catid='';
 											</div>
 										</div>
 										<div class="col-md-4">
+
+										<?php if(isset($_SESSION['Access']) && $_SESSION['Access'] == 8) { ?>
 											<div>
 											<label for="psw"><span class="text-secondary">Điểm phản biện</span></label>
 												<input type="number" name="PointProcess" value="<?php echo $row['PointProcess'] ?>" class="form-control" placeholder="" min="0" max="100" />
 											</div>
+									
+											<div>
+											<label for="psw"><span class="text-secondary">Điểm phản biện 2</span></label>
+												<input type="number" name="PointProcess2" value="<?php echo $row['PointProcess2'] ?>" class="form-control" placeholder="" min="0" max="100" />
+											</div>
+										
+
+										<?php } else { if ($row['SupervisingTeacherID'] == $userId) { ?>
+											<div>
+											<label for="psw"><span class="text-secondary">Điểm phản biện</span></label>
+												<input type="number" name="PointProcess" value="<?php echo $row['PointProcess'] ?>" class="form-control" placeholder="" min="0" max="100" />
+											</div>
+											<?php } else { ?>
+											<div>
+											<label for="psw"><span class="text-secondary">Điểm phản biện 2</span></label>
+												<input type="number" name="PointProcess2" value="<?php echo $row['PointProcess2'] ?>" class="form-control" placeholder="" min="0" max="100" />
+											</div>
+											<?php } } ?>
 										</div>
 									</div>
 								</form>

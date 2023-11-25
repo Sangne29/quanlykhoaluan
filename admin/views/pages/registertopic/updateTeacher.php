@@ -24,6 +24,20 @@ foreach ($list_cat as $cat)
 		}
 }
 
+$SupervisingTeacher2='';
+foreach ($list_cat as $cat)
+{	
+		if($cat['ID']==$row['SupervisingTeacherID2'])
+		{
+			$SupervisingTeacher2.='<option selected value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
+		}
+
+		else 
+		{
+			$SupervisingTeacher2.='<option value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
+		}
+}
+
 ?>
 
 <?php require_once 'views/header.php'; ?>
@@ -77,6 +91,14 @@ foreach ($list_cat as $cat)
 												<select name="SupervisingTeacherID"  class="form-control">
 													<?php 
 													echo $SupervisingTeacher;
+													?>
+												</select>
+											</div>
+											<div>
+												<label>Phân công giáo viên phản biện 2</label>
+												<select name="SupervisingTeacherID2"  class="form-control">
+													<?php 
+													echo $SupervisingTeacher2;
 													?>
 												</select>
 											</div>

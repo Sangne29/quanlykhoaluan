@@ -50,7 +50,7 @@ class registertopic extends Database
 		// giang vien
 		if($role == 7) 
 		{
-			$sql="SELECT * FROM $this->table WHERE status!='0' AND SupervisingTeacherID = '$userId' ORDER BY ID ASC";
+			$sql="SELECT * FROM $this->table WHERE status!='0' AND (SupervisingTeacherID = '$userId' OR SupervisingTeacherID2 = '$userId')  ORDER BY ID ASC";
 			return $this->QueryAll($sql);
 		}
 	}

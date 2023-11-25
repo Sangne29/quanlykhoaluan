@@ -53,6 +53,7 @@ $list=$category->registertopic_list_supervising($userId,$role);
 														<th>MSSV</th>
 														<th>Lớp</th>
 														<th>Nhập điểm phản biện</th>
+														<!-- <th>Nhập điểm phản biện 2</th> -->
 														<th>Kết quả đánh giá</th>
 														<th>Tên đề tài</th>
 														<th>Loại đề tài</th>
@@ -71,12 +72,36 @@ $list=$category->registertopic_list_supervising($userId,$role);
 														<td><?php echo $row['StudentName']  ?></td>
 														<td><?php echo $row['username']  ?></td>
 														<td><?php echo $row['ClassRoom']  ?></td>
+														
+														<?php if(isset($_SESSION['Access']) && $_SESSION['Access'] == 8) {?>
+															<td style="";>
+															<?php echo $row['PointProcess']." | ".$row['PointProcess2'];  ?>
+															<a class="btn btn-sm btn-light text-warning border" href="index.php?option=registertopic&cat=updateProcessPoint&id=<?php echo $row['ID']  ?>">
+																<i class="fas fa-edit"></i>
+															</a>
+															<!-- </td>
+															<td style="";>
+																<?php echo $row['PointProcess2']  ?>
+																<a class="btn btn-sm btn-light text-warning border" href="index.php?option=registertopic&cat=updateProcessPoint&id=<?php echo $row['ID']  ?>">
+																	<i class="fas fa-edit"></i>
+																</a>
+															</td> -->
+														<?php  }else { if ($row['SupervisingTeacherID'] == $userId) { ?>
+
 														<td style="";>
 															<?php echo $row['PointProcess']  ?>
 															<a class="btn btn-sm btn-light text-warning border" href="index.php?option=registertopic&cat=updateProcessPoint&id=<?php echo $row['ID']  ?>">
 																<i class="fas fa-edit"></i>
 															</a>
 														</td>
+														<?php } else { ?>
+														<td style="";>
+															<?php echo $row['PointProcess2']  ?>
+															<a class="btn btn-sm btn-light text-warning border" href="index.php?option=registertopic&cat=updateProcessPoint&id=<?php echo $row['ID']  ?>">
+																<i class="fas fa-edit"></i>
+															</a>
+														</td>
+														<?php }} ?>
 														<td> <a href="index.php?option=registertopic&cat=ResulTofEvaluation&id=<?php echo $row['ID']; ?>">KQ Đánh giá </a></td>
 														<td> <?php echo $row['TopicName']  ?></td>
 														<td> <?php echo $row['TopicType']  ?> </td>

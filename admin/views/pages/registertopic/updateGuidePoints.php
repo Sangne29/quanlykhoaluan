@@ -62,6 +62,10 @@ $str_catid='';
 												<label for="psw"><span class="text-secondary">Điểm Hướng dẫn</span></label>
 												<input type="number" name="GuidePoints" value="<?php echo $row['GuidePoints'] ?>" class="form-control" placeholder="" min="0" max="100" />
 											</div>
+											<div>
+												<label for="psw"><span class="text-secondary">Điểm Hướng dẫn 2</span></label>
+												<input type="number" name="GuidePoints2" value="<?php echo $row['GuidePoints2'] ?>" class="form-control" placeholder="" min="0" max="100" />
+											</div>
 										</div>
 									</div>
 								</form>

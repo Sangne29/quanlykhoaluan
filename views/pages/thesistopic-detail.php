@@ -91,6 +91,8 @@ if(isset($idTicket)){
 		'Status'=>1,
 		'GuidePoints'=>0,
 		'PointProcess'=>0,
+		'PointProcess2'=>0,
+
 		'ThesisTopicID'=>$row['ID'],
 	);
 	$registertopic->registertopic_insert($mydata1);

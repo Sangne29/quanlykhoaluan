@@ -67,6 +67,10 @@ $str_catid='';
 											<p><?php echo $row['PointProcess'] ?></p>
 											</div>
 											<div>
+											<label for="psw"><span class="text-secondary  font-weight-bold">Điểm phản biện 2</span></label>
+											<p><?php echo $row['PointProcess2'] ?></p>
+											</div>
+											<div>
 												<label for="psw"><span class="text-secondary  font-weight-bold">Gáo viên hướng dẫn</span></label>
 												<p><?php echo $row['TeacherName'] ?></p>
 											</div>

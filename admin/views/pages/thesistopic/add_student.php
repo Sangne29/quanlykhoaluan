@@ -49,6 +49,7 @@
 		'Status'=>1,
 		'GuidePoints'=>0,
 		'PointProcess'=>0,
+		'PointProcess2'=>0,
 		'ThesisTopicID'=>$row['ID'],
 	);
 	$registertopic->add_student_registertopic_insert($mydata1);

@@ -63,7 +63,7 @@ $list=$category->registertopic_list($userId,$role);
 														<td><?php echo $row['username']  ?></td>
 														<td><?php echo $row['ClassRoom']  ?></td>
 														<td><?php echo $row['GroupName']  ?></td>
-														<td> <?php echo $row['GuidePoints']  ?>
+														<td> <?php echo $row['GuidePoints']." | ".$row['GuidePoints2'];  ?>
 														    <a class="btn btn-sm btn-light text-warning border" href="index.php?option=registertopic&cat=updateGuidePoints&id=<?php echo $row['ID']  ?>">
 															<i class="fas fa-edit"></i>
 														</a>
