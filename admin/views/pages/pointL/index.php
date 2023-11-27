@@ -2,7 +2,7 @@
 $pointL = loadModel('PointL');
 $userId = $_SESSION['user_id'];
 $role =  $_SESSION['Access'];
-
+$index =  0;
 $list=$pointL->list_pointL();
 ?>
 
@@ -38,9 +38,20 @@ $list=$pointL->list_pointL();
 										<?php if(has_flash('thongbao')):  ?>
 											<div class="alert alert-success" > <?php echo get_flash('thongbao') ; ?> </div>
 										<?php endif; ?>
+
+										<div style="padding: 10px;display: flex;line-height: 2;">Lo1: Xác định được yêu cầu của khóa luận cần thực hiện<br>
+											Lo2: Phân tích yêu cầu (hiện trạng, nghiệp vụ) và mô hình hóa được yêu cầu của đề tài.<br>															
+											Lo3: Thiết kế một hệ thống thông tin/đưa ra giải pháp đáp ứng được yêu cầu của đề tài.<br>
+											Lo4: Hiện thực hóa hệ thống thông tin theo thiết kế đã đưa ra/Hiện thực giải pháp đã đưa ra.<br>
+											Lo5: Viết được báo cáo khóa luận tốt nghiệp.<br>
+											Lo6: Trình bày được các kiến thưc nền tảng liên quan đến đề tài khóa luận.<br>
+											Lo7: Đánh giá việc hiện thực khóa luận đáp ứng yêu cầu đề tài khóa luận.<br>
+											Lo8: Bảo vệ (defend) kết quả khóa luận trước giảng viên phản biện.<br>
+										</div>
 										<div class="col-md-9  w-100 ">
                                             <a href="index.php?option=pointL&cat=download" class="btn btn-info">Download</a>
 										</div>
+										
 										<div class="col-md-12 p-3">
                                            
 											<table id="myTable1" class="table table-striped table-bordered dt-responsive text-center">
@@ -68,7 +79,7 @@ $list=$pointL->list_pointL();
                                                     
                                                         <tr>
                                                         <form method="POST" action="index.php?option=pointL&cat=update&id=<?php echo $row['id'];?>">
-                                                            <td></td>
+                                                            <td><?php echo $index + 1  ?></td>
                                                             <td><?php echo $row['StudentName']  ?></td>
                                                             <td><?php echo $row['username']  ?></td>
                                                             <td class="text-break col-md-3"><?php echo $row['TopicName']  ?></td>
