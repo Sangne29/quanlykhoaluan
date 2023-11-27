@@ -32,6 +32,8 @@
         <li id="thesistopic" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=thesistopic&cat=Allthesistopic"> Xem tất cả & duyệt đề tài</a></li>
         <li id="attendance" class="py-2 border-bottom row "><a class="px-3" style="color: #ffffff" href="index.php?option=attendance"> Điểm danh sinh viên</a></li>
         <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=evaluation"> Đánh giá sinh viên</a></li>
+        <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=pointL"> Chấm điểm L0</a></li>
+
       
         <?php  }?>  
     </ul>

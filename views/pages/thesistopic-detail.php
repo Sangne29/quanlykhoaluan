@@ -23,6 +23,7 @@ $rowUser= $user->list_user_cuss($id);
 $studentgroup= loadModel('Student_group');
 $listGroup=$studentgroup->all_studentgroup($row['ID']);
 
+$pointL = loadModel('PointL');
 
 
 $teacher = "Thực thập doanh nghiệp";
@@ -110,7 +111,10 @@ if(isset($idTicket)){
 	);
 	$studentgroup->studentgroup_insert($mydata);
 
-	
+	$pointL->pointL_insert(array(
+		'userId' => $id,
+		'registertopicId' => $registertopic->last_inserted(),
+	));
 
 	$mydata2=array(
 		'GroupName'=>$idTicket,

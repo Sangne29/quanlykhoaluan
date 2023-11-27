@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2023 at 08:57 AM
+-- Generation Time: Nov 27, 2023 at 12:21 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -69,7 +69,6 @@ CREATE TABLE `evaluation_student` (
 --
 
 INSERT INTO `evaluation_student` (`id`, `StudentID`, `ThesisTopicID`, `base10`, `base4`, `registertopicID`) VALUES
-(42, 28, 29, 1.5, 0.6, 85),
 (43, 26, 29, 6, 2.4, 86),
 (44, 18, 29, 1.5, 0.6, 87),
 (45, 9, 32, NULL, NULL, 88),
@@ -77,7 +76,8 @@ INSERT INTO `evaluation_student` (`id`, `StudentID`, `ThesisTopicID`, `base10`, 
 (47, 14, 32, NULL, NULL, 90),
 (48, 3, 32, NULL, NULL, 92),
 (49, 4, 32, NULL, NULL, 93),
-(50, 27, 29, 5.25, 2.1, 97);
+(50, 27, 29, 5.25, 2.1, 97),
+(52, 28, 32, NULL, NULL, 99);
 
 -- --------------------------------------------------------
 
@@ -100,6 +100,33 @@ CREATE TABLE `menu` (
   `updated_by` int(11) DEFAULT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pointl`
+--
+
+CREATE TABLE `pointl` (
+  `id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `registertopicId` int(11) NOT NULL,
+  `L01` tinytext NOT NULL,
+  `L02` tinytext NOT NULL,
+  `L03` tinytext NOT NULL,
+  `L04` tinytext NOT NULL,
+  `L05` tinytext NOT NULL,
+  `L06` tinytext NOT NULL,
+  `L07` tinytext NOT NULL,
+  `L08` tinytext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pointl`
+--
+
+INSERT INTO `pointl` (`id`, `userId`, `registertopicId`, `L01`, `L02`, `L03`, `L04`, `L05`, `L06`, `L07`, `L08`) VALUES
+(2, 28, 99, 'D', 'A', '', '', '', 'B', '', '');
 
 -- --------------------------------------------------------
 
@@ -149,24 +176,27 @@ CREATE TABLE `registertopic` (
   `Commnet` varchar(500) DEFAULT NULL,
   `Commentcounter` varchar(255) DEFAULT NULL,
   `ThesisTopicID` int(11) DEFAULT NULL,
-  `SupervisingTeacherID` int(11) DEFAULT NULL
+  `SupervisingTeacherID` int(11) DEFAULT NULL,
+  `SupervisingTeacherID2` int(11) NOT NULL,
+  `GuidePoints2` float NOT NULL,
+  `PointProcess2` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `registertopic`
 --
 
-INSERT INTO `registertopic` (`ID`, `Name`, `StudentID`, `ClassRoom`, `username`, `StudentName`, `GroupName`, `Process`, `TopicType`, `TopicName`, `TeacherID`, `TeacherName`, `Subject`, `Type`, `Status`, `GuidePoints`, `PointProcess`, `Commnet`, `Commentcounter`, `ThesisTopicID`, `SupervisingTeacherID`) VALUES
-(85, 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', '28', 'DHHTTT15', '19519011', 'DMT', '88', 0, 'Khóa luận tốt nghiệp.', 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 1, 2, NULL, NULL, 29, NULL),
-(86, 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', '26', 'DHHTTT15', '19444470', 'Nguyen Hoang Hoang', '89', 0, 'Khóa luận tốt nghiệp.', 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 10, 2, NULL, NULL, 29, NULL),
-(87, 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', '18', 'DHHTTT15', '19445522', 'Phạm Thị Thu Hien', '90', 0, 'Khóa luận tốt nghiệp.', 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 3, 0, NULL, NULL, 29, NULL),
-(88, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '9', 'DHHTTT15', '', '', '91', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL),
-(89, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '8', 'DHHTTT15', 'SinhVien2', 'Sinh Viên 2', '92', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL),
-(90, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '14', 'DHHTTT15', '19441115', 'Phạm Thị Thu Hien', '93', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL),
-(91, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '9', 'DHHTTT15', '', '', '94', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL),
-(92, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '3', 'DHHTTT15', '19446151', 'Phạm Hồng Khang', '95', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL),
-(93, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '4', 'DHHTTT15', '19443311', 'Ngô Thị Thúy Hằng', '96', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL),
-(97, 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', '27', 'DHHTTT15', 'ez', 'Dda', NULL, 0, 'Khóa luận tốt nghiệp.', 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 3, 7.5, NULL, NULL, 29, NULL);
+INSERT INTO `registertopic` (`ID`, `Name`, `StudentID`, `ClassRoom`, `username`, `StudentName`, `GroupName`, `Process`, `TopicType`, `TopicName`, `TeacherID`, `TeacherName`, `Subject`, `Type`, `Status`, `GuidePoints`, `PointProcess`, `Commnet`, `Commentcounter`, `ThesisTopicID`, `SupervisingTeacherID`, `SupervisingTeacherID2`, `GuidePoints2`, `PointProcess2`) VALUES
+(86, 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', '26', 'DHHTTT15', '19444470', 'Nguyen Hoang Hoang', '89', 0, 'Khóa luận tốt nghiệp.', 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 10, 2, NULL, NULL, 29, NULL, 0, 0, 0),
+(87, 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', '18', 'DHHTTT15', '19445522', 'Phạm Thị Thu Hien', '90', 0, 'Khóa luận tốt nghiệp.', 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 3, 0, NULL, NULL, 29, NULL, 0, 0, 0),
+(88, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '9', 'DHHTTT15', '', '', '91', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL, 0, 0, 0),
+(89, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '8', 'DHHTTT15', 'SinhVien2', 'Sinh Viên 2', '92', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL, 0, 0, 0),
+(90, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '14', 'DHHTTT15', '19441115', 'Phạm Thị Thu Hien', '93', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL, 0, 0, 0),
+(91, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '9', 'DHHTTT15', '', '', '94', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL, 0, 0, 0),
+(92, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '3', 'DHHTTT15', '19446151', 'Phạm Hồng Khang', '95', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL, 0, 0, 0),
+(93, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '4', 'DHHTTT15', '19443311', 'Ngô Thị Thúy Hằng', '96', 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL, 0, 0, 0),
+(97, 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', '27', 'DHHTTT15', 'ez', 'Dda', NULL, 0, 'Khóa luận tốt nghiệp.', 'Xây dựng Phần mềm hay Website Quản Lý khoá luận tốt nghiệp và thực tập doanh nghiệp.', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 3, 7.5, NULL, NULL, 29, NULL, 0, 0, 0),
+(99, 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', '28', 'DHHTTT15', '19519011', 'DMT', NULL, 0, 'Khóa luận tốt nghiệp.', 'Tìm hiểu QR Code để truy xuất nguồn gốc và áp dụng xây dựng hệ thống phân phối nông sản sạch', 11, 'Trần Thị Kim Chi', 'IS', 1, 1, 0, 0, NULL, NULL, 32, NULL, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -216,12 +246,12 @@ CREATE TABLE `studentgroup` (
 --
 
 INSERT INTO `studentgroup` (`ID`, `ID1`, `username`, `FullName`, `ClassRoom`, `ThesisTopicID`, `TeacherID`, `TeacherName`, `SubGroupID`, `registertopicID`) VALUES
-(88, '28', '19519011', 'DMT', 'DHHTTT15', 29, 11, 'Trần Thị Kim Chi', 88, 85),
 (89, '26', '19444470', 'Nguyen Hoang Hoang', 'DHHTTT15', 29, 11, 'Trần Thị Kim Chi', 89, 86),
 (90, '18', '19445522', 'Phạm Thị Thu Hien', 'DHHTTT15', 29, 11, 'Trần Thị Kim Chi', 90, 87),
 (92, '8', 'SinhVien2', 'Sinh Viên 2', 'DHHTTT15', 32, 11, 'Trần Thị Kim Chi', 92, 89),
 (93, '14', '19441115', 'Phạm Thị Thu Hien', 'DHHTTT15', 32, 11, 'Trần Thị Kim Chi', 93, 90),
-(100, '27', 'ez', 'Dda', 'DHHTTT15', 29, 11, 'Trần Thị Kim Chi', 0, 97);
+(100, '27', 'ez', 'Dda', 'DHHTTT15', 29, 11, 'Trần Thị Kim Chi', 0, 97),
+(102, '28', '19519011', 'DMT', 'DHHTTT15', 32, 11, 'Trần Thị Kim Chi', 0, 99);
 
 -- --------------------------------------------------------
 
@@ -358,6 +388,14 @@ ALTER TABLE `menu`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `pointl`
+--
+ALTER TABLE `pointl`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `pointL_user` (`userId`),
+  ADD KEY `pointL_registertopic` (`registertopicId`);
+
+--
 -- Indexes for table `post`
 --
 ALTER TABLE `post`
@@ -415,13 +453,19 @@ ALTER TABLE `attendance`
 -- AUTO_INCREMENT for table `evaluation_student`
 --
 ALTER TABLE `evaluation_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pointl`
+--
+ALTER TABLE `pointl`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `post`
@@ -433,7 +477,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `registertopic`
 --
 ALTER TABLE `registertopic`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -445,7 +489,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `studentgroup`
 --
 ALTER TABLE `studentgroup`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `teacher`
@@ -475,6 +519,13 @@ ALTER TABLE `user`
 ALTER TABLE `evaluation_student`
   ADD CONSTRAINT `ThesisTopicID_thesistopic` FOREIGN KEY (`ThesisTopicID`) REFERENCES `thesistopic` (`ID`) ON DELETE CASCADE,
   ADD CONSTRAINT `evaluation_registertopic` FOREIGN KEY (`registertopicID`) REFERENCES `registertopic` (`ID`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `pointl`
+--
+ALTER TABLE `pointl`
+  ADD CONSTRAINT `pointL_registertopic` FOREIGN KEY (`registertopicId`) REFERENCES `registertopic` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `pointL_user` FOREIGN KEY (`userId`) REFERENCES `user` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `studentgroup`
