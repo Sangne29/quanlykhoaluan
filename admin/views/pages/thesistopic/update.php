@@ -31,21 +31,21 @@ foreach ($list_cat as $cat)
 	}
 }
 
-$SupervisingTeacher2='';
-foreach ($list_cat as $cat)
-{	
-	if($cat['ID'] != $row['InstructorsID']){
-		if($cat['ID']==$row['SupervisingTeacherID2'])
-		{
-			$SupervisingTeacher2.='<option selected value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
-		}
+// $SupervisingTeacher2='';
+// foreach ($list_cat as $cat)
+// {	
+// 	if($cat['ID'] != $row['InstructorsID']){
+// 		if($cat['ID']==$row['SupervisingTeacherID2'])
+// 		{
+// 			$SupervisingTeacher2.='<option selected value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
+// 		}
 
-		else 
-		{
-			$SupervisingTeacher2.='<option value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
-		}
-	}
-}
+// 		else 
+// 		{
+// 			$SupervisingTeacher2.='<option value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
+// 		}
+// 	}
+// }
 ?>
 
 <?php require_once 'views/header.php'; ?>
@@ -75,7 +75,7 @@ foreach ($list_cat as $cat)
 									<button class="btn btn-sm btn-success" name="CAPNHAT"  type="submit"> Cập nhật đề tài
 									</div>
 										<input type="hidden" name="SupervisingTeacherID" value="<?php echo $row['SupervisingTeacherID'] ?>">
-										<input type="hidden" name="SupervisingTeacherID2" value="<?php echo $row['SupervisingTeacherID2'] ?>">
+										<!-- <input type="hidden" name="SupervisingTeacherID2" value="<?php echo $row['SupervisingTeacherID2'] ?>"> -->
 									<div class="row p-3">
 										<div class="col-md-8">
 											<div>
