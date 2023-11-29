@@ -31,21 +31,21 @@ foreach ($list_cat as $cat)
 	}
 }
 
-$SupervisingTeacher2='';
-foreach ($list_cat as $cat)
-{	
-	if($cat['ID'] != $row['InstructorsID']){
-		if($cat['ID']==$row['SupervisingTeacherID2'])
-		{
-			$SupervisingTeacher2.='<option selected value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
-		}
+// $SupervisingTeacher2='';
+// foreach ($list_cat as $cat)
+// {	
+// 	if($cat['ID'] != $row['InstructorsID']){
+// 		if($cat['ID']==$row['SupervisingTeacherID2'])
+// 		{
+// 			$SupervisingTeacher2.='<option selected value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
+// 		}
 
-		else 
-		{
-			$SupervisingTeacher2.='<option value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
-		}
-	}
-}
+// 		else 
+// 		{
+// 			$SupervisingTeacher2.='<option value="'.$cat['ID'].'">'.$cat['fullname'].'</option>';
+// 		}
+// 	}
+// }
 ?>
 
 <?php require_once 'views/header.php'; ?>
