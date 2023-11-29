@@ -1,9 +1,13 @@
 <?php  
  class Database extends config
  {
+
+	
+// Create connection
  	function __construct()
  	{
  		$this->conn = mysqli_connect($this->DB_SERVER,$this->DB_USERNAME,$this->DB_PASSWORD,$this->DB_NAME);
+		//  $this->conn = mysqli_connect("localhost", "root", "", "quanlykhoaluan");
  		mysqli_set_charset($this->conn,"utf8");
  	}
 

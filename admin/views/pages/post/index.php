@@ -9,6 +9,8 @@ $list=$post->post_list();
 require_once 'views/header.php';
   ?>
 
+
+
 <section class="clear
 fix maincontent py-3">
 		<div class="w-100 container-fluid " >
@@ -17,7 +19,7 @@ fix maincontent py-3">
 					<div class="row">
 						<div class="col-md-6"><strong class="text-danger">POSTS</strong></div>
 						<div class="col-md-6 text-right">
-							<?php if ($_SESSION['Access']!=1) {
+							<?php if (2==1) {
 								echo "Bạn k có quyền sửa";
 							}else{ ?>
 							<a class="btb btn-success btn-sm" href="index.php?option=post&cat=insert"> <i class="fa fa-plus-square-o"></i> Add Post</a>
@@ -44,6 +46,7 @@ fix maincontent py-3">
 							</tr>
 						</thead>
 						<tbody>
+						
 							<?php foreach($list as $row):?>
 								<?php
 								 $id=$row['id']; 
@@ -74,7 +77,7 @@ fix maincontent py-3">
 				</div>
 			</div>
 		</div>
-	</section>
+</section>
 <script>
 $(document).ready( function () {
     $('#myTable').DataTable();

@@ -1,6 +1,6 @@
 <?php
-$category = loadModel('attendance');
-$list=$category->attendance_list();
+$category = loadModel('Attendanceinternship');
+$list=$category->attendanceInternship_list();
 ?>
 
 
@@ -33,7 +33,7 @@ $list=$category->attendance_list();
 											<div class="alert alert-danger" > <?php echo get_flash('thongbaoloi') ; ?> </div>
 										<?php endif; ?>
 								<!--Tạo mã QR với xuất file -->
-								<form action = "views/pages/attendance/process.php" method="POST">
+								<form action = "views/pages/attendance-internship/process.php" method="POST">
 									<div class="row">
 										<div class="col-md-7">
 											<div class="pt-4 ml-5">
