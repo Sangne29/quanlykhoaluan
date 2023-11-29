@@ -38,7 +38,7 @@ $list_evaluation = $category_evaluation->list_evaluation($userId, $id);
 										
 									</div>
 								</div>
-								<div class="row">
+								<div class="row" >
 									<div  class="card-block p-3">
 										<?php if(has_flash('thongbao')):  ?>
 											<div class="alert alert-success" > <?php echo get_flash('thongbao') ; ?> </div>
@@ -47,7 +47,7 @@ $list_evaluation = $category_evaluation->list_evaluation($userId, $id);
 										</div>
 										<div class="col-md-12 p-3">
 											<form  action="index.php?option=evaluation&cat=update&id=<?php echo $_REQUEST['id'];?>" method="POST" >
-											<table id="myTable1" class="table table-striped table-bordered dt-responsive text-center">
+											<table id="myTable1" class="table table-striped table-bordered dt-responsive text-center" style="width: 77rem;">
 												<thead>
 													<tr class='table-info'>
 														<th>STT</th>
@@ -80,7 +80,7 @@ $list_evaluation = $category_evaluation->list_evaluation($userId, $id);
 													
 										        </tbody>
 												<input type="submit" name="update-evaluation" value="Cập nhật" class="form-control btn-primary col-md-1 float-right" >
-													</form>
+											</form>
 									</table>
 									
 								</div>

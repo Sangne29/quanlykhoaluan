@@ -14,6 +14,8 @@
 	$listGroup=$studentgroup->all_studentgroup($row['ID']);
 
 	
+	$pointL = loadModel('PointL');
+
 
 	$teacher = "Thực thập doanh nghiệp";
 	if ($row['ThesisTopicTypeID'] == 1) 
@@ -80,6 +82,11 @@
 		
 	);
 	$studentgroup->studentgroup_update($mydata3);
+	$pointL->pointL_insert(array(
+		'userId' => $id,
+		'registertopicId' => $registertopic_last_inserted,
+	));
+
 
 		set_flash('thongbao','Đăng ký thành công.');
 		redirect('index.php?option=thesistopic&cat=add_student&id='.$thesistopicID);

@@ -30,15 +30,18 @@ $list_thesistopic_name=$category->thesistopic_name_distinct_list($userId,$role);
 						<section class=" ">
 							<div class=" bg-white card">
 								<div class="row justify-content-start">
-									<div class="col-md-3">
+									<div class="col-md-3 ml-3 mt-3">
 										<select name="select_thesistopic_evaluation" id="select_thesistopic_evaluation">
                                             <option disabled selected value="-1"></option>
                                             <?php foreach($list_thesistopic_name as $row):?>
 												<option value="<?php echo $row['id'] ?> "><?php echo $row['Name'] ?> </option>
 											<?php endforeach; ?>
                                         </select>
-                                        <button class='btn btn-info my-2' id="select_thesistopic_btn" >Chọn đề tài</button>
-									<button class='btn btn-primary my-2 ' id="download_evaluation" >Tải tất cả bảng điểm</button>
+										
+										<button class='btn btn-info my-3' id="select_thesistopic_btn" >Chọn đề tài</button>
+										<button class='btn btn-primary px-5' id="download_evaluation" >Tải tất cả bảng điểm</button>
+										
+										
                                         
                                         
 									</div>
