@@ -76,7 +76,7 @@ $list_evaluation = $category_evaluation->list_evaluation($userId, $id);
 															<td><input name="<?php echo ('GuidePoints2_'.$row['registertopicID']); ?>" class="form-control" type="text" value="<?php echo $row['GuidePoints2']; ?>"></td>
 															
 															<td><input name="<?php echo ('PointProcess_'.$row['registertopicID']); ?>"class="form-control" type="text" value="<?php echo $row['PointProcess']; ?>"></td>
-															<td><input name="<?php echo ('PointProcess_'.$row['registertopicID']); ?>"class="form-control" type="text" value="<?php echo $row['PointProcess2']; ?>"></td>
+															<td><input name="<?php echo ('PointProcess2_'.$row['registertopicID']); ?>"class="form-control" type="text" value="<?php echo $row['PointProcess2']; ?>"></td>
 
 															<td><?php echo $row['base10']; ?></td>
 															<td><?php echo $row['base4']; ?></td>
