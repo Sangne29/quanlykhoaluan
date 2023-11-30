@@ -20,6 +20,7 @@
         <li id="registertopic" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=registertopic&cat=insertPoint"> Quản lý đề tài hướng dẫn</a></li>
         <li id="thesistopic" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=thesistopic"> Quản lý đề tài</a></li>
         <li id="attendance" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=attendance"> Điểm danh sinh viên</a></li>
+        <li id="attendance" class="py-2 border-bottom row "><a class="px-3" style="color: #ffffff" href="index.php?option=attendance-internship"> Điểm danh sinh viên thực tập</a></li>
         <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=evaluation"> Đánh giá sinh viên</a></li>
         <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=pointL"> Chấm điểm Abet</a></li>
 

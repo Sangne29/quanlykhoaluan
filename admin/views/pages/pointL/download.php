@@ -1,5 +1,5 @@
 <?php 
-    if($_SESSION['Access'] == 8){
+    if($_SESSION['Access'] == 8 || $_SESSION['Access'] == 7){
         $pointL = loadModel('PointL');
         $data = $pointL->get_data_export();
         // print_r($data);
