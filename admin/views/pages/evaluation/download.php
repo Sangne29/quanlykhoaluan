@@ -13,7 +13,7 @@
             array_push($headers, $k);
         }
         header("content-type:text/csv; charset=utf-8");    
-        header("Content-Disposition: attachment; filename=download_evaluation.csv");  
+        header("Content-Disposition: attachment; filename=download_evaluation.xls");  
         header("Pragma: no-cache"); 
         header("Expires: 0");
         fputs($fp, "\xEF\xBB\xBF");

@@ -11,7 +11,8 @@ if(!isset($_SESSION['customer_id'])) {
 }
 $id=$_REQUEST['id'];
 $registertopic= loadModel('u_registertopic');
-$row=$registertopic->registertopic_rowid($id);
+$row=$registertopic->registertopic_with_pointL($id);
+
 
 $evaluation = loadModel("evaluation");
 $eval_data = $evaluation->get_by_registertopic($id);
@@ -115,6 +116,46 @@ $rowUser = $user->list_user_cuss($id);
 									<tr>
 										<td class="title">Ghi chú từ giảng viên phản biện</td>
 										<td><?php echo $row['Commentcounter'] ?></td>
+									</tr>
+									<tr>
+										<td class="title">Điểm Abet</td>
+										<td>
+
+										<table  class="table table-striped table-bordered dt-responsive text-center">
+												<thead>
+													<tr class='table-info'>
+														
+														<th>L01</th>
+														<th>L02</th>
+														<th>L03</th>
+														<th>L04</th>
+														<th>L05</th>
+														<th>L06</th>
+														<th>L07</th>
+														<th>L08</th>
+
+													</tr>
+												</thead>
+												<tbody>
+                                                
+                                                    
+                                                        <tr>
+                                                            <td><?php echo $row['L01'] ?></td>
+                                                            <td><?php echo $row['L02'] ?></td>
+                                                            <td><?php echo $row['L03'] ?></td>
+                                                            <td><?php echo $row['L04'] ?></td>
+                                                            <td><?php echo $row['L05'] ?></td>
+                                                            <td><?php echo $row['L06'] ?></td>
+                                                            <td><?php echo $row['L07'] ?></td>
+                                                            <td><?php echo $row['L08'] ?></td>
+                                                        </tr>
+											        
+                                                    
+										        </tbody>
+
+									    </table>
+
+										</td>
 									</tr>
 									<tr>
 										<td class="title">Điểm trung bình</td>

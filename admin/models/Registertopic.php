@@ -28,7 +28,7 @@ class registertopic extends Database
 		// trưởng bộ môn
 		if($role == 8) 
 		{
-			$sql="SELECT * FROM $this->table WHERE status!='0' AND TeacherID = '$userId' ORDER BY ID ASC";
+			$sql="SELECT * FROM $this->table WHERE status!='0'  ORDER BY ID ASC";
 			return $this->QueryAll($sql);
 		}
 		// giang vien

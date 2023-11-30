@@ -14,7 +14,7 @@
                 array_push($headers, $k);
             }
             header("Content-Type: application/vnd.ms-excel; charset=utf-8");    
-            header("Content-Disposition: attachment; filename=download_pointL.xlsx");  
+            header("Content-Disposition: attachment; filename=download_pointL.xls");  
             header("Pragma: no-cache"); 
             header("Expires: 0");
             // fputs($fp, "\xEF\xBB\xBF");

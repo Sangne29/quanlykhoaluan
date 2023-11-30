@@ -13,10 +13,21 @@ class PointL extends Database
         $sql="SELECT * FROM $this->table";
         return $this->QueryCount($sql);
     }
-    function list_pointL(){
+    function list_pointL($userId , $role){
         // $sql="SELECT StudentName, username, ClassRoom FROM $this->register_topic WHERE status!='0' AND TeacherID = '$userId' AND ThesisTopicID='$thesistopicId'  ORDER BY ID ASC 
         // LEFT JOIN $this->table ON $this->register_topic.StudentID = $this->table.StudentID";
-		$sql = "SELECT *
+		if($role == 8 ){
+			$sql = "SELECT *
+				FROM
+					`registertopic`
+				
+				INNER JOIN `user`
+					ON `registertopic`.StudentID = `user`.ID
+				INNER JOIN `pointL`
+					ON `registertopic`.StudentID = `pointL`.userId
+			";
+		}else if($role == 7) {
+			$sql = "SELECT *
 			FROM
 				`registertopic`
 			
@@ -24,7 +35,9 @@ class PointL extends Database
 				ON `registertopic`.StudentID = `user`.ID
 			INNER JOIN `pointL`
 				ON `registertopic`.StudentID = `pointL`.userId
+			Where TeacherID = $userId
 		";
+		}
 		
 		return $this->QueryAll($sql);
     }

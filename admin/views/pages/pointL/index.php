@@ -3,7 +3,7 @@ $pointL = loadModel('PointL');
 $userId = $_SESSION['user_id'];
 $role =  $_SESSION['Access'];
 $index =  0;
-$list=$pointL->list_pointL();
+$list=$pointL->list_pointL($userId, $role);
 ?>
 
 
@@ -18,11 +18,11 @@ $list=$pointL->list_pointL();
 					<div class="p-4">
 						<div class="card card-title bg-white p-1">
 							<div class="row">
-								<div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Chấm Liểm L0 (Alphabet) cho sinh viên</h5> </div>
+								<div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Chấm Liểm L0 (Abet) cho sinh viên</h5> </div>
 								<div class="col-md-6 m-0">
 									<ol class="breadcrumb bg-white float-sm-right m-0">
 										<li class="breadcrumb-item m-0"><a href="~Admin">Home</a></li>
-										<li class="breadcrumb-item active m-0">Chấm Liểm L0 (Alphabet) cho sinh viê</li>
+										<li class="breadcrumb-item active m-0">Chấm Liểm L0 (Abet) cho sinh viê</li>
 									</ol>
 								</div>
 								

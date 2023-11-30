@@ -55,6 +55,13 @@ class u_registertopic extends Database
 		WHERE ID='$id'";
 		return $this->QueryOne($sql);
 	}
+	function registertopic_with_pointL($id){
+			$sql="SELECT * FROM $this->table 
+			LEFT JOIN `pointL`ON `pointL`.`registertopicId` = $this->table.`ID`
+			WHERE $this->table.ID='$id'
+		";
+		return $this->QueryOne($sql);
+	}
 	function list_registertopic11($ma)
 	{
 		$sql="SELECT * FROM $this->table 
