@@ -65,7 +65,13 @@ class evaluation extends Database
 		$sql_process = "SELECT PointProcess from registertopic where ID=$registertopicID";
 		$PointProcess = $this->QueryOne($sql_process)['PointProcess'];
 
-		$base10 = ($GuidePoints + $PointProcess)/2.0;
+		$sql_guide2 = "SELECT GuidePoints2 from registertopic where ID=$registertopicID";
+		$GuidePoints2 = $this->QueryOne($sql_guide2)['GuidePoints'];
+		$sql_process2 = "SELECT PointProcess2 from registertopic where ID=$registertopicID";
+		$PointProcess2 = $this->QueryOne($sql_process2)['PointProcess'];
+
+
+		$base10 = ($GuidePoints + $PointProcess + $GuidePoints2 + $PointProcess2)/4.0;
 		$base4  = ($base10 / 10.0 ) * 4.0;
 
 		$id = $this->QueryOne("SELECT id from $this->table where registertopicID=$registertopicID")['id'];
