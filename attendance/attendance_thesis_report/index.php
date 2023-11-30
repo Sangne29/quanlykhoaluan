@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: center;
   }
+
   h1{
     display: flex;
     justify-content: center;
@@ -41,11 +42,9 @@
     display: flex;
     justify-content: center;
   }
-  img{
-    padding-left: 157px;
-  }
+  
   body {
-  width: 400px;
+  width: 250px;
   margin: auto;
   border: solid;
   padding: 50px;
@@ -56,7 +55,15 @@
 
 
 <body>
-    <img alt="Image" height="45" width="90" src="https://lms.iuh.edu.vn/pluginfile.php/1/theme_academi/logo/1676936055/Logo_IUH.png">
+  <div id="logo_iuh" style="
+    justify-content: center;
+    width: 100%;
+    display: flex;
+">
+      <img alt="Image" height="45" width="90" src="https://lms.iuh.edu.vn/pluginfile.php/1/theme_academi/logo/1676936055/Logo_IUH.png">
+
+</div>
+    
     <h1>Điểm Danh Sinh Viên</h1>
     <h3>Báo cáo khóa luận tốt nghiệp</h3>
     <form action="process_attendance.php" method="post" class="formAttendance">

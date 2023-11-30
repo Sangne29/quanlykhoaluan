@@ -11,7 +11,7 @@ class Attendanceinternship extends Database
 	
 	function attendanceInternship_list()
 	{
-			$sql="SELECT * FROM $this->table ORDER BY date_attendance ASC";
+			$sql="SELECT * FROM $this->table ORDER BY date_attendance desc";
 			return $this->QueryAll($sql);
 	}
 	function attendanceInternship_count_export($date_attendance)

@@ -9,9 +9,10 @@ class attendance extends Database
 		$this->table = $this->TableName('attendance');
 	}
 	
-	function attendance_list()
+	function attendance_list($teachername)
 	{
-			$sql="SELECT * FROM $this->table ORDER BY STT ASC";
+
+			$sql="SELECT * FROM $this->table where teacher_name = '$teachername' ORDER BY date_attendance asc";
 			return $this->QueryAll($sql);
 	}
 	function attendance_count_export($date_attendance)

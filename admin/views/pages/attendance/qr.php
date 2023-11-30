@@ -6,7 +6,7 @@
 		function onReady()
 		{
 			var qrcode = new QRCode("id_qrcode", {
-				text:"https://quanlykhoaluan.click/QuanLyKhoaLuan/index.php?option=attendance",
+				text:"https://iuhgraduation.000webhostapp.com/attendance/attendance_thesis_report/",
 				width:350,
 				height:350,
 				colorDark:"#000000",
@@ -29,7 +29,7 @@
 					<div class="p-4">
 						<div class="card card-title bg-white p-1">
 							<div class="row">
-								<div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Trình tạo QR CODE</h5> </div>
+								<div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Khóa luận tốt nghiệp</h5> </div>
 								<div class="col-md-6 m-0">
 									<ol class="breadcrumb bg-white float-sm-right m-0">
 										<li class="breadcrumb-item m-0"><a href="~Admin">Home</a></li>

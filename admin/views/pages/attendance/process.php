@@ -43,10 +43,10 @@ if(isset($_POST['export_btn']))
             $sheet->setCellValue('B1', 'Ngày điểm danh');
             $sheet->setCellValue('C1', 'Họ và tên');
             $sheet->setCellValue('D1', 'Mã số sinh viên');
-            $sheet->setCellValue('E1', 'Giới tính');
             $sheet->setCellValue('F1', 'Địa chỉ');
             $sheet->setCellValue('G1', 'Số điện thoại');
             $sheet->setCellValue('H1', 'Email');
+            $sheet->setCellValue('E1', 'Giáo viên hướng dẫn');
 
             //Chọn sheet - sheet bắt đầu từ 0
             $rowCount = 2;
@@ -57,10 +57,10 @@ if(isset($_POST['export_btn']))
                 $sheet->setCellValue('B'.$rowCount, $data['date_attendance']);
                 $sheet->setCellValue('C'.$rowCount, $data['student_fullname']);
                 $sheet->setCellValue('D'.$rowCount, $data['mssv']);
-                $sheet->setCellValue('E'.$rowCount, $data['gender']);
                 $sheet->setCellValue('F'.$rowCount, $data['address']);
                 $sheet->setCellValue('G'.$rowCount, $data['phone']);
                 $sheet->setCellValue('H'.$rowCount, $data['email']);
+                $sheet->setCellValue('H'.$rowCount, $data['teacher_name']);
                 $rowCount++;
             }
 
@@ -90,7 +90,7 @@ if(isset($_POST['export_btn']))
     else
     {
         set_flash('thongbaoloi','Không tìm thấy danh sách sinh viên tại ngày: '.$date_attendance);
-        header("Location: https://quanlykhoaluan.click/QuanLyKhoaLuan/admin/index.php?option=attendance");
+        header("Location: https://https://iuhgraduation.000webhostapp.com/attendance/attendance_thesis_report/");
     }
 }
 // XUẤT FILE ----------------------------------------------------------------------------------------------------------------
@@ -114,7 +114,7 @@ if(isset($_POST['create_attendance_password']))
 	$query1="UPDATE attendancecondition SET pass = $pass, attendance_time = $attendance_time, start = $start, expire = $expire WHERE ID=1";
 	$query_run1 = mysqli_query($conn, $query1);
 	set_flash('thongbao',' Lưu thành công');
-    header("Location: https://quanlykhoaluan.click/QuanLyKhoaLuan/admin/index.php?option=attendance");
+    header("Location: https://iuhgraduation.000webhostapp.com/attendance/attendance_thesis_report/");
 }
 
 	// echo $_SESSION['create_attendance_password'];

@@ -1,6 +1,6 @@
 <?php
 $category = loadModel('attendance');
-$list=$category->attendance_list();
+$list=$category->attendance_list($_SESSION['user_fullname']);
 ?>
 
 
@@ -15,7 +15,7 @@ $list=$category->attendance_list();
 					<div class="p-4">
 						<div class="card card-title bg-white p-1">
 							<div class="row">
-								<div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Điểm danh sinh viên</h5> </div>
+								<div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Điểm danh sinh viên làm bài khóa luận</h5> </div>
 								<div class="col-md-6 m-0">
 									<ol class="breadcrumb bg-white float-sm-right m-0">
 										<li class="breadcrumb-item m-0"><a href="~Admin">Home</a></li>
@@ -90,10 +90,11 @@ $list=$category->attendance_list();
 														<th>Họ và tên</th>
 														<th>Mã số sinh viên</th>
 														<th>Ngày điểm danh</th>
-														<th>Giới tính</th>
+														
 														<th>Địa chỉ</th>
 														<th>Số điện thoại</th>
 														<th>Email</th>
+														<th>Giáo viên hướng dẫn thực tập</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -103,10 +104,10 @@ $list=$category->attendance_list();
 														<td><?php echo $row['student_fullname']  ?></td>
 														<td><?php echo $row['mssv']  ?></td>
 														<td><?php echo $row['date_attendance']  ?></td>
-														<td><?php echo $row['gender']  ?></td>
 														<td><?php echo $row['address']  ?></td>
 														<td><?php echo $row['phone']  ?></td>
 														<td><?php echo $row['email']  ?></td>
+														<td><?php echo $row['teacher_name']  ?></td>
 													</tr>
 													<?php endforeach; ?>
 												</tbody>

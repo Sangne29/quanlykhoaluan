@@ -8,7 +8,7 @@
     </li>
     <li class="py-2 border-bottom row"><a class="pl-3" style="color: #ffffff" href="index.php"> Home </a></li>
       <!-- <li class="py-2 border-bottom row"><a class="pl-3" style="color: #ffffff" href="index.php?option=topic"> Quản lý loại bài viết</a></li> -->
-      <li class="py-2 border-bottom row"><a class="pl-3" style="color: #ffffff" href="index.php?option=Post"> Quản lý bài viết</a></li>
+      <!-- <li class="py-2 border-bottom row"><a class="pl-3" style="color: #ffffff" href="index.php?option=Post"> Quản lý bài viết</a></li> -->
       <?php if(isset($_SESSION['Access']) && $_SESSION['Access'] == 0) {
         ?>
         <li id="user" class="py-2 border-bottom row "><a class="px-3  " style="color: #ffffff" href="index.php?option=user"><i class="fas fa-file-user"></i> Quản lý người dùng</a></li>
@@ -35,8 +35,6 @@
         <li id="attendance" class="py-2 border-bottom row "><a class="px-3" style="color: #ffffff" href="index.php?option=attendance-internship"> Điểm danh sinh viên thực tập</a></li>
         <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=evaluation"> Đánh giá sinh viên</a></li>
         <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=pointL"> Chấm điểm Abet</a></li>
-
-      
         <?php  }?>  
     </ul>
   </div>

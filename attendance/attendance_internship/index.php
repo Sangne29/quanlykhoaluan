@@ -45,7 +45,7 @@
     justify-content: center;
   }
   body {
-  width: 400px;
+  width: 250px;
   height: 100%;
   margin: auto;
   border: solid;
@@ -57,7 +57,14 @@
 
 
 <body>
-    <img alt="Image" height="45" width="90" src="https://lms.iuh.edu.vn/pluginfile.php/1/theme_academi/logo/1676936055/Logo_IUH.png">
+<div id="logo_iuh" style="
+    justify-content: center;
+    width: 100%;
+    display: flex;
+">
+      <img alt="Image" height="45" width="90" src="https://lms.iuh.edu.vn/pluginfile.php/1/theme_academi/logo/1676936055/Logo_IUH.png">
+
+</div>
     <h1>Điểm Danh Sinh Viên</h1>
     <h3>Báo cáo thực tập doanh nghiệp</h3>
     <form action="process_attendance.php" method="post" class="formAttendance">
