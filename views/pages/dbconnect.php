@@ -1,8 +1,10 @@
 <?php
-	 $DB_SERVER='localhost';
-	 $DB_USERNAME='root';
-	 $DB_PASSWORD='';
-	 $DB_NAME='quanlykhoaluan';
+	 
+
+	 $DB_SERVER='sql205.infinityfree.com';
+	 $DB_USERNAME='if0_35532636';
+	 $DB_PASSWORD='B7wFOPkv3kYY5KJ';
+	 $DB_NAME='if0_35532636_quanlykhoaluan';
 	 $dbprefix='';
 // Create connection
 $conn = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);

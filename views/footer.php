@@ -121,20 +121,14 @@
 }
 </style>
 <footer style=" background: #484CA3">
-	<div class="footer-upper">
-		<div class="container">
-			<div class="footer-links">
-
-			</div>
-		</div>
-	</div>
+	
 	<div class="copyright">
-		<div class="container">
+		<div class="container" style="padding-top: 50px;">
 			<div class="row">
 				<div class="col-xs-6">
 					<div class="copyright-content">
 						<p>Khóa luận tốt nghiệp thực hiện bởi :
-						<br><a href="https://www.cyclonethemes.com/" target="_blank">Huỳnh Tấn Sang & Nguyễn Tiến Hoàng</a></p>
+						<br>Huỳnh Tấn Sang & Nguyễn Tiến Hoàng</a></p>
 					</div>
 				</div>
 				<div class="col-xs-6">

@@ -6,10 +6,10 @@ function set_flash($name,$value)
 
 }
 date_default_timezone_set("asia/Ho_Chi_Minh");
-$servername = "localhost";
-$database = "quanlykhoaluan";
-$username = "root";
-$password = "";
+$servername = "sql205.infinityfree.com";
+$database = "if0_35532636_quanlykhoaluan";
+$username = "if0_35532636";
+$password = "B7wFOPkv3kYY5KJ";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
@@ -90,7 +90,7 @@ if(isset($_POST['export_btn']))
     else
     {
         set_flash('thongbaoloi','Không tìm thấy danh sách sinh viên tại ngày: '.$date_attendance);
-        header("Location: https://quanlykhoaluan.click/QuanLyKhoaLuan/admin/index.php?option=attendance");
+        header("Location: https://quanlykhoaluan.click/QuanLyKhoaLuan/admin/index.php?option=attendance_internship");
     }
 }
 // XUẤT FILE ----------------------------------------------------------------------------------------------------------------

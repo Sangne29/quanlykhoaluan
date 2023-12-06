@@ -104,8 +104,8 @@ require_once ('system/Database.php');
 	</div>
 	<div class="content-info col-sm-9">
 		<i class="icon-list"></i>
-			<a class="c-i-title" title="Thông báo v/v cấp phát chứng chỉ Giáo dục quốc phòng và an ninh đại học khóa 15, Giáo dục quốc phòng và an ninh, Giáo dục thể chất cho sinh viên đại học khóa 14 và cao đẳng khóa 19, các khóa đại học, cao đẳng trở về trước"
-				href="index.php?option=ViewNotifications/Notification">
+			<a class="c-i-title" title="mo"
+				href="https://iuh.edu.vn/">
 				Thông báo v/v cấp phát chứng chỉ Giáo dục quốc phòng và an ninh đại học khóa 15, Giáo dục quốc phòng và an ninh, Giáo dục thể chất cho sinh viên đại học khóa 14 và cao đẳng khóa 19, các khóa đại học, cao đẳng trở về trước 
 			</a>
 				<span class="content-date">08-05-2023</span> 

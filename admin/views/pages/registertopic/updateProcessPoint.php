@@ -61,13 +61,13 @@ $str_catid='';
 
 										<?php if(isset($_SESSION['Access']) && $_SESSION['Access'] == 8) { ?>
 											<div>
-											<label for="psw"><span class="text-secondary">Điểm phản biện</span></label>
-												<input type="number" name="PointProcess" value="<?php echo $row['PointProcess'] ?>" class="form-control" placeholder="" min="0" max="100" />
+											<label for="psw"><span class="text-secondary">Điểm phản biện 1</span></label>
+												<input type="number"  min="0" max="10" name="PointProcess" value="<?php echo $row['PointProcess'] ?>" class="form-control" placeholder="" min="0" max="100" />
 											</div>
 									
 											<div>
 											<label for="psw"><span class="text-secondary">Điểm phản biện 2</span></label>
-												<input type="number" name="PointProcess2" value="<?php echo $row['PointProcess2'] ?>" class="form-control" placeholder="" min="0" max="100" />
+												<input type="number"  min="0" max="10" name="PointProcess2" value="<?php echo $row['PointProcess2'] ?>" class="form-control" placeholder="" min="0" max="100" />
 											</div>
 										
 

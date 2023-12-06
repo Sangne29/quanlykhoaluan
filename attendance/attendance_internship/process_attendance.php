@@ -2,7 +2,7 @@
 
 
 // Kết nối đến cơ sở dữ liệu
-$conn = new mysqli('localhost', 'root', '', 'quanlykhoaluan');
+$conn = new mysqli('sql205.infinityfree.com', 'if0_35532636', 'B7wFOPkv3kYY5KJ', 'if0_35532636_quanlykhoaluan');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

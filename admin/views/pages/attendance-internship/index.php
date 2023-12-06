@@ -38,7 +38,7 @@ $list=$category->attendanceInternship_list();
 									<div class="row">
 										<div class="col-md-7">
 											<div class="pt-4 ml-5">
-												<a href="index.php?option=attendance&cat=qr" class="btn btn-primary">Tạo mã QR điểm danh</a>
+												<a href="index.php?option=attendance_internship&cat=qr" class="btn btn-primary">Tạo mã QR điểm danh</a>
 											</div>
 										</div>
 										<div class="col-md-7">

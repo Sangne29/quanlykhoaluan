@@ -6,7 +6,7 @@ require_once ('config.php');
 require_once ('system/load.php');
 require_once ('system/core.php');
 
-$servername = "localhost";
+$servername = "sql205.infinityfree.com";
 $database = "quanlykhoaluan";
 $username = "root";
 $password = "";

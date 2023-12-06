@@ -1,5 +1,12 @@
-
-<div class="col-md-2 " style="height:700px; background: #484CA3" >
+<script>
+  let open = true
+  function toggleSidebar() {
+    this.open = !this.open
+    document.getElementById('sidebar').style.width = this.open ? 250 : 50;
+   
+}
+</script>
+<div id="sidebar"  style="height:700px; background: #484CA3" >
   <ul class="list-unstyled ul-left-menu">
     <li class="border-bottom py-2 row">
       <div class="input-group px-3">
@@ -19,7 +26,7 @@
         <li id="thesistopic" class="py-2 border-bottom row "><a class="px-3" style="color: #ffffff" href="index.php?option=registertopic&cat=RegisterArgument" >Quản lý đề tài phản biện</a></li>
         <li id="registertopic" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=registertopic&cat=insertPoint"> Quản lý đề tài hướng dẫn</a></li>
         <li id="thesistopic" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=thesistopic"> Quản lý đề tài</a></li>
-        <li id="attendance" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=attendance"> Điểm danh sinh viên</a></li>
+        <li id="attendance" class="py-2 border-bottom row "><a class="px-3" style="color: #ffffff" href="index.php?option=attendance"> Điểm danh sinh viên khóa luận</a></li>
         <li id="attendance" class="py-2 border-bottom row "><a class="px-3" style="color: #ffffff" href="index.php?option=attendance-internship"> Điểm danh sinh viên thực tập</a></li>
         <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=evaluation"> Đánh giá sinh viên</a></li>
         <li id="evaluation" class="py-2 border-bottom row "><a class="px-3 " style="color: #ffffff" href="index.php?option=pointL"> Chấm điểm Abet</a></li>
@@ -39,5 +46,5 @@
         <?php  }?>  
     </ul>
   </div>
-
+  <button style="height: 30px; border: none;border-radius: 0.25rem;" class="toggle-btn" onclick="toggleSidebar()"><img style="height: 20px;" src="https://cdn0.iconfinder.com/data/icons/line-design-basic-set-10/24/chevron-arrow-expand-right-512.png"></button>
 

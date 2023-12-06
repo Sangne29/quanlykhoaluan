@@ -41,7 +41,7 @@ require_once ('system/Database.php');
 
 1. Sinh viên chủ động lập nhóm, hai sinh viên mỗi nhóm, định hướng đề tài, có thể chủ động liên hệ trước với giảng viên nếu được chấp nhận hướng dẫn, có thể đề xuất hướng đề tài với giảng viên để giảng viên cập nhật lên hệ thống KLTN của Bộ môn. Các bạn có 1 tuần để chuẩn bị.<br><br>
 
-2. Từ 9AM ngày 02/01/2023, sinh viên tiến hành đăng ký đề tài trên website: http://localhost/quanlykhoaluan/
+2. Từ 9AM ngày 02/01/2023, sinh viên tiến hành đăng ký đề tài trên website: http://sql205.infinityfree.com/quanlykhoaluan/
 . Mỗi đề tài có 2 nhóm và mỗi nhóm có tối đa 2 sinh viên. Những nhóm đã liên hệ trước với giảng viên, được đồng ý hướng dẫn, có thể nhờ giảng viên đăng ký giúp cho sinh viên.
 Các vấn đề kỹ thuật cần được hướng dẫn trong quá trình đăng ký, sinh viên liên hệ với thầy Hữu Quang hoặc thầy Tấn Phước.<br><br>
 

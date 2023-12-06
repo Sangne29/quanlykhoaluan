@@ -45,7 +45,7 @@ require_once ('system/Database.php');
 				<div class="row">
 					<div class="col-md-12">
 						<div class="destination-outer">
-							<div class="destination-fw-item " style="padding-top:10px;">
+							<div class="destination-fw-item " style="padding-top:10px; padding-bottom: 90px;">
 								<div class="row">
 									<div class="col-md-4">
 										<div class="destination-fw-image">
@@ -54,30 +54,29 @@ require_once ('system/Database.php');
 									</div>
 									<div class="col-md-8">
 										<div class="destination-fw-desc fw-content">
-											<h3><a href="~/chi-tiet-bai-viet/@item.slug">Hướng dẫn sử dụng app Moodle trên hệ thống học tập trực tuyến LMS</a></h3>
+											<h3><a href="https://iuh.edu.vn/" target="_blank">Trường đại học công nghiệp thành phố Hồ chí Minh</a></h3>
 											<div class="package-content">
-												<span>07/01/2021 15:45:00</span><br>
-												<p>Trung tâm Quản trị Hệ thống - Trường Đại học Công nghiệp TP.HCM xin giới thiệu cách cài đặt và sử dụng app Moodle trên hệ thống học tập trực tuyến lms.iuh.edu.vn</p>
-												<a href="">Đọc thêm ></a>
+												<p>Tiền thân của Trường Đại học Công nghiệp thành phố Hồ Chí Minh là Trường Huấn nghiệp Gò Vấp do các tu sĩ dòng Don Bosco thành lập 11/11/1956 tại xã Hạnh Thông, Quận Gò Vấp, Tỉnh Gia Định. Năm 1968, Trường được đổi tên thành Trường tư thục Trung học Kỹ thuật đệ nhất cấp Don Bosco. Đến ngày 31/01/1970, Trường được cải biên thành Trường tư thục Trung học Kỹ thuật đệ nhị cấp Don Bosco, được gọi tắt là Trường Trung học Kỹ thuật Don Bosco. Sau ngày hòa bình, thống nhất đất nước, quân giải phóng miền Nam tiếp quản và ngày 19/12/1975 Trường được bàn giao cho Tổng cục Cơ khí Luyện kim và Điện tử. Năm 1978, Trường được đổi tên thành Trường Công nhân Kỹ thuật IV trực thuộc Bộ Cơ khí và Luyện kim. Đến năm 1994, Trường hợp nhất với Trường Trung học Hóa chất II tại thành phố Biên Hòa thành Trường Trung học Kỹ thuật Công nghiệp IV, trực thuộc Bộ Công Nghiệp. Tháng 3 năm 1999, Trường được nâng cấp thành Trường Cao đẳng Công nghiệp IV và tháng 12 năm 2004, Trường được nâng cấp thành Trường Đại học Công nghiệp thành phố Hồ Chí Minh theo quyết định số 214/2004/QĐ...</p>
+												<a href="https://iuh.edu.vn/">Đọc thêm ></a>
 											</div>
 										</div>
 									</div>
 								</div>
 
 								<div class="row" style="margin-top: 20px;">
-									<div class="col-md-4">
-										<div class="destination-fw-image">
-											<img  src="https://toplist.vn/images/800px/doi-ngu-giang-day-chat-luong-1111004.jpg" alt="Image">
-										</div>
-									</div>
+									
 									<div class="col-md-8">
 										<div class="destination-fw-desc fw-content">
-											<h3><a href="~/chi-tiet-bai-viet/@item.slug">Hướng dẫn sử dụng app Moodle trên hệ thống học tập trực tuyến LMS</a></h3>
+											<h3><a href="https://reviewedu.net/ky-tuc-xa-iuh-dai-hoc-cong-nghiep-tphcm">Review đại học Công nghiệp thành phố Hồ Chí Minh</a></h3>
 											<div class="package-content">
-												<span>07/01/2021 15:45:00</span><br>
-												<p>Trung tâm Quản trị Hệ thống - Trường Đại học Công nghiệp TP.HCM xin giới thiệu cách cài đặt và sử dụng app Moodle trên hệ thống học tập trực tuyến lms.iuh.edu.vn</p>
-												<a href="">Đọc thêm ></a>
+												<p>IUH- Đại học công nghiệp TpHCM được biết đến là một trường đào tạo đa ngành với chất lượng tốt. Do đó, được nhiều sinh viên và phụ huynh tin tưởng lựa chọn. Nhà trường không chỉ chú trọng đến chất lượng đào tạo, tuyển sinh mà còn quan tâm đến đời sống của sinh viên. Thông qua hệ thống ký túc xá của trường được đầu tư bài bản, với đầy đủ trang thiết bị, tiện nghi. Đem đến cho sinh viên cảm giác thoải, đây được xem như ngôi nhà thứ hai của các bạn sinh viên. </p>
+												<a href="https://reviewedu.net/ky-tuc-xa-iuh-dai-hoc-cong-nghiep-tphcm">Đọc thêm ></a>
 											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="destination-fw-image">
+										<img  src="https://reviewedu.net/wp-content/uploads/2022/07/dhcongnghiep_mqat.jpg" alt="Image">
 										</div>
 									</div>
 								</div>

@@ -43,7 +43,6 @@ if(isset($_SESSION['user_id'])){redirect('index.php');}
 						$_SESSION['user_fullname']=$user['fullname'];
 						$_SESSION['user_img']=$user['img'];
 						redirect('index.php');
-
 					}
 					else
 					{

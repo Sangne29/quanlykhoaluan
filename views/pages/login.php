@@ -48,7 +48,7 @@ else
     <div class="search-content-slider">
       <form name="form1" action="" method="post" class="clearfix">
         <div class="col-md-6">
-          <div class="billing-details ">
+          <div class="billing-details" style="padding-top: 70px;">
             <div class="form-group">
              <label>Tên đăng nhập:</label>
              <input value="" class="input" type="text" name="username" placeholder="Username">
@@ -63,6 +63,7 @@ else
            <button type="submit"   name="LOGINSS"   style="margin-top:20px;" class="btn-blue btn-red btn-style-1 pt-2" type="submit">Đăng nhập</button>
          </div>
        </div>
+       <div class="col-md-6"><img src="https://i.pinimg.com/originals/94/09/7e/94097e458fbb22184941be57aaab2c8f.png"> </div>
      </form>
    </div>
  </div>

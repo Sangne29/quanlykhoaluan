@@ -2,7 +2,7 @@
 
 
 // Kết nối đến cơ sở dữ liệu
-$conn = new mysqli('localhost', 'root', '', 'quanlykhoaluan');
+$conn = new mysqli('sql205.infinityfree.com', 'if0_35532636', 'B7wFOPkv3kYY5KJ', 'if0_35532636_quanlykhoaluan');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -38,7 +38,7 @@ if ($result_user->num_rows > 0) {
         echo "Lỗi: " . $query_attendance . "<br>" . $conn->error;
     }
 } else {
-    echo "Không tìm thấy sinh viên có mã số $student_id trong hệ thống.";
+    echo "Không tìm thấy sinh viên có mã số $student_id trong hệ thống.<br> hoặc sinh viên chưa đăng kí đề tài khóa luận tốt nghiệp";
 }
 
 // Đóng kết nối
